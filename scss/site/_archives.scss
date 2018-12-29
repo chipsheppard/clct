@@ -1,0 +1,93 @@
+.blog,
+.archive {
+
+	.hentry {
+		box-shadow: 0 4px 24px  rgba(0, 0, 0, .25);
+		background-color: #ffffff;
+		padding: .5em 1.5em;
+		margin: 0 0 2em;
+		@include font-size(1);
+
+		.wp-post-image {
+			display: block;
+			width: 100%;
+		}
+
+		.entry-header,
+		.entry-content,
+		.link-more {
+			overflow: hidden;
+		}
+
+		&.sticky {
+			border-top:2px solid $color__green;
+		}
+	}
+
+	.entry-content {
+		p {
+			margin-bottom: .25em;
+		}
+	}
+
+	.format-status .entry-content p {
+		margin-bottom: 1em;
+	}
+
+	.entry-title {
+		word-break: break-word;
+		@include font-size(1.5);
+	}
+	.entry-meta {
+		color: $color__base-light;
+		.posted-on,
+		.updated-on,
+		.byline,
+		.comments-link {
+			color: $color__base-medium;
+			a {
+				color: $color__base-medium;
+			}
+		}
+	}
+}
+
+.fi-link {
+	display: inline-block;
+	margin: 1.5em 1.5em 1.5em 0;
+	max-width: 300px;
+	overflow: hidden;
+	float: left;
+
+	@include breakpoint(tablet-v) {
+		float:none;
+		margin-bottom: 0;
+		margin-right: 0;
+		max-width: none;
+		width: 100%;
+	}
+}
+
+.featured-image {
+	display: inline-block;
+	transition: all 0.25s ease-in-out;
+
+	&:hover {
+		transform: scale(1.15,1.15);
+	}
+}
+
+.archive-description {
+	line-height: 1.2;
+}
+
+/* READ MORE LINKS */
+.more-link {
+	display: block;
+	font-weight: $font__weight-bold;
+	line-height: 1;
+	padding: 2em 0;
+	position: relative;
+	text-transform: uppercase;
+	@include font-size(.75);
+}

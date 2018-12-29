@@ -1,0 +1,29 @@
+.wpcf7 {
+	div.wpcf7-response-output {
+	    margin: 1em 0;
+	    padding: 0;
+	    border: 0;
+	}
+	input.wpcf7-not-valid {
+		border-color: #bb8072;
+	}
+	span.wpcf7-not-valid-tip {
+		position: absolute;
+		top: 30px;
+		left: 8px;
+	    color: $color__brick;
+	    font-size: 1em;
+	    font-weight: normal;
+	    display: inline-block;
+	}
+	.wpcf7-form.sent p {
+		display: none;
+	}
+	div.wpcf7-mail-sent-ok {
+	    border: 0;
+		color: $color__green;
+		font-family: $font__headers;
+		margin: 0;
+		@include font-size(1.875);
+	}
+}

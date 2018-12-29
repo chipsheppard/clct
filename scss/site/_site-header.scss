@@ -1,0 +1,92 @@
+.site-header {
+	position:absolute;
+	z-index: 99;
+	width: 100%;
+
+	@include breakpoint(tablet-v) {
+		background-color: #ffffff;
+	}
+}
+
+.header-wrap {
+	position: relative;
+	z-index: 100;
+}
+
+// BRANDING BLOCK
+.site-branding {
+	float: left;
+	text-align: left;
+	padding: 1em 0;
+	vertical-align: middle;
+	transition: all .5s ease;
+
+	@include breakpoint(tablet-v) {
+		display:block;
+		width: 160px;
+	}
+
+	@include breakpoint(phone-h) {
+		padding: .75em 0;
+	}
+
+	a {
+		display: inline-block;
+		line-height: 1;
+	}
+}
+
+// Image logo
+.custom-logo {
+	line-height: 1;
+
+	img {
+		display: block;
+		max-width: 162px;
+		width: 100%;
+		height: auto;
+		transition: max-height 0.2s;
+	}
+
+	a:hover {
+		opacity: 0.75;
+	}
+
+	@include breakpoint(tablet-v) {
+		display: none;
+	}
+}
+
+
+// Site Title (text logo)
+.site-title,
+.site-description {
+	display: none;
+}
+
+@include breakpoint(tablet-v) {
+	.site-title {
+		display: block;
+		margin-bottom: 0;
+		@include font-size(.875);
+
+		a {
+			color: #000000;
+			display: inline-block;
+			line-height: 1.25;
+			text-decoration: none;
+
+			&:hover {
+				opacity: 0.75;
+			}
+		}
+
+		// Description
+		.site-description {
+			display: block;
+			letter-spacing: 1px;
+			line-height: 1;
+			padding-top: .5em;
+		}
+	}
+}

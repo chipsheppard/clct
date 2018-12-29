@@ -1,0 +1,16 @@
+.site-content {
+	clear: both;
+
+	.content-area {
+		padding: 0 0 2.5em;
+		width: 100%;
+	}
+}
+
+.inner-wrap {
+	margin: 0 auto;
+	max-width: $size__site-max;
+	padding: 0 3%;
+	position: relative;
+	width: 100%;
+}

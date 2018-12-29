@@ -1,0 +1,45 @@
+.top-block {
+	background-color: $color__green;
+}
+.homepage .top-block {
+	background-color: $color__brown;
+}
+.land .top-block,
+.single-land .top-block {
+	background-color: $color__green;
+}
+.trust .top-block {
+	background-color: $color__blue;
+}
+.projects .top-block,
+.single-project .top-block {
+	background-color: $color__olive;
+}
+.give .top-block {
+	background-color: $color__brick;
+}
+
+
+// Mobile Menu Opened
+@include breakpoint(tablet-v) {
+	.site-navigation .menu-wrap {
+		background-color: $color__green;
+	}
+	.homepage .site-navigation .menu-wrap {
+		background-color: $color__brown;
+	}
+	.land .site-navigation .menu-wrap,
+	.single-land .site-navigation .menu-wrap {
+		background-color: $color__green;
+	}
+	.trust .site-navigation .menu-wrap {
+		background-color: $color__blue;
+	}
+	.projects .site-navigation .menu-wrap,
+	.single-project .site-navigation .menu-wrap {
+		background-color: $color__olive;
+	}
+	.give .site-navigation .menu-wrap {
+		background-color: $color__brick;
+	}
+}

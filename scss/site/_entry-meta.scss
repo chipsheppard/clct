@@ -1,0 +1,27 @@
+.entry-meta {
+	color: #ffffff;
+	display: inline-block;
+	@include font-size(.75);
+
+	.posted-on,
+	.updated-on,
+	.byline,
+	.comments-link {
+		color: $color__base-xxlight;
+		display: inline-block;
+		padding-right: .75em;
+
+		a {
+			color: #ffffff;
+
+			&:hover {
+				color: currentColor;
+				opacity: .75;
+			}
+		}
+	}
+
+	.updated-on {
+		display: block;
+	}
+}

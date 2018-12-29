@@ -1,0 +1,82 @@
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.entry-title,
+.page-title {
+	color: #ffffff;
+	letter-spacing: 1px;
+	word-break: break-word;
+
+	@include breakpoint(phone-h) {
+		@include font-size(1.875);
+	}
+
+	div {
+		@include font-size(1);
+		text-transform: uppercase;
+	}
+}
+.page-title {
+	margin-top: 2em;
+}
+.entry-title {
+	margin: 1em 0 0;
+}
+
+.page .entry-title,
+.single .entry-title {
+	line-height: 1.2;
+	margin: 3em 0 .5em;
+	@include font-size(3.875);
+
+	@include breakpoint(phone-h) {
+		@include font-size(1.688);
+	}
+}
+
+.single .hentry {
+	margin-bottom: 4em;
+}
+
+.entry-content {
+
+	ol,
+	ul {
+		margin-left: 2.5em;
+		margin-bottom: 1.5em;
+
+		li {
+			line-height: 1.4;
+			padding-bottom: .5em;
+		}
+	}
+
+	ol > li {
+		list-style-type: decimal;
+	}
+
+	ul > li {
+		list-style-type: disc;
+	}
+
+	ol ol,
+	ul ul {
+		margin-top: .5em;
+		margin-bottom: 0;
+
+		li:last-child {
+			padding-bottom: 0;
+		}
+	}
+
+	dt {
+		font-weight: $font__weight-bold;
+	}
+
+	dd {
+		margin: 0 1em 1em;
+	}
+
+}

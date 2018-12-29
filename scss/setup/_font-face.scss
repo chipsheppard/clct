@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Galaxie Polaris';
+    src: url('assets/fonts/GalaxiePolaris-Book.eot');
+    src: url('assets/fonts/GalaxiePolaris-Book.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/GalaxiePolaris-Book.woff2') format('woff2'),
+         url('assets/fonts/GalaxiePolaris-Book.woff') format('woff'),
+         url('assets/fonts/GalaxiePolaris-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Galaxie Polaris';
+    src: url('assets/fonts/GalaxiePolaris-BookItalic.eot');
+    src: url('assets/fonts/GalaxiePolaris-BookItalic.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/GalaxiePolaris-BookItalic.woff2') format('woff2'),
+         url('assets/fonts/GalaxiePolaris-BookItalic.woff') format('woff'),
+         url('assets/fonts/GalaxiePolaris-BookItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Galaxie Polaris';
+    src: url('assets/fonts/GalaxiePolaris-Medium.eot');
+    src: url('assets/fonts/GalaxiePolaris-Medium.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/GalaxiePolaris-Medium.woff2') format('woff2'),
+         url('assets/fonts/GalaxiePolaris-Medium.woff') format('woff'),
+         url('assets/fonts/GalaxiePolaris-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Galaxie Polaris';
+    src: url('assets/fonts/GalaxiePolaris-MediumItalic.eot');
+    src: url('assets/fonts/GalaxiePolaris-MediumItalic.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/GalaxiePolaris-MediumItalic.woff2') format('woff2'),
+         url('assets/fonts/GalaxiePolaris-MediumItalic.woff') format('woff'),
+         url('assets/fonts/GalaxiePolaris-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Galaxie Polaris';
+    src: url('assets/fonts/GalaxiePolaris-Bold.eot');
+    src: url('assets/fonts/GalaxiePolaris-Bold.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/GalaxiePolaris-Bold.woff2') format('woff2'),
+         url('assets/fonts/GalaxiePolaris-Bold.woff') format('woff'),
+         url('assets/fonts/GalaxiePolaris-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Galaxie Polaris';
+    src: url('assets/fonts/GalaxiePolaris-BoldItalic.eot');
+    src: url('assets/fonts/GalaxiePolaris-BoldItalic.eot?#iefix') format('embedded-opentype'),
+         url('assets/fonts/GalaxiePolaris-BoldItalic.woff2') format('woff2'),
+         url('assets/fonts/GalaxiePolaris-BoldItalic.woff') format('woff'),
+         url('assets/fonts/GalaxiePolaris-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('assets/fonts/TiemposText-Regular.eot');
+    src: url('assets/fonts/TiemposText-Regular.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/TiemposText-Regular.woff2') format('woff2'),
+        url('assets/fonts/TiemposText-Regular.woff') format('woff'),
+        url('assets/fonts/TiemposText-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('assets/fonts/TiemposText-RegularItalic.eot');
+    src: url('assets/fonts/TiemposText-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/TiemposText-RegularItalic.woff2') format('woff2'),
+        url('assets/fonts/TiemposText-RegularItalic.woff') format('woff'),
+        url('assets/fonts/TiemposText-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Tiempos Text Medium';
+    src: url('assets/fonts/TiemposText-Medium.eot');
+    src: url('assets/fonts/TiemposText-Medium.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/TiemposText-Medium.woff2') format('woff2'),
+        url('assets/fonts/TiemposText-Medium.woff') format('woff'),
+        url('assets/fonts/TiemposText-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Tiempos Text Medium';
+    src: url('assets/fonts/TiemposText-MediumItalic.eot');
+    src: url('assets/fonts/TiemposText-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/TiemposText-MediumItalic.woff2') format('woff2'),
+        url('assets/fonts/TiemposText-MediumItalic.woff') format('woff'),
+        url('assets/fonts/TiemposText-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('assets/fonts/TiemposText-Bold.eot');
+    src: url('assets/fonts/TiemposText-Bold.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/TiemposText-Bold.woff2') format('woff2'),
+        url('assets/fonts/TiemposText-Bold.woff') format('woff'),
+        url('assets/fonts/TiemposText-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Tiempos Text';
+    src: url('assets/fonts/TiemposText-BoldItalic.eot');
+    src: url('assets/fonts/TiemposText-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/TiemposText-BoldItalic.woff2') format('woff2'),
+        url('assets/fonts/TiemposText-BoldItalic.woff') format('woff'),
+        url('assets/fonts/TiemposText-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}

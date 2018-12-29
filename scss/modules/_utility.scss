@@ -1,0 +1,72 @@
+/*
+ * Utility
+--------------------------------------------- */
+
+@media only screen and (min-width:1024px) {
+	.mobile-only {
+		display: none;
+	}
+}
+
+@include breakpoint(tablet-h) {
+	.desktop-only {
+		display: none;
+	}
+}
+
+.ta-center {
+	text-align: center;
+}
+.ta-right {
+	text-align: right;
+}
+
+img.flex {
+	width: 100%;
+}
+
+.bg-base {
+	background-color:$color__base;
+}
+.bg-base-medium {
+	background-color:$color__base-medium;
+}
+.bg-base-light {
+	background-color:$color__base-light;
+}
+.bg-base-xlight {
+	background-color:$color__base-xlight;
+}
+.bg-base-xxlight {
+	background-color:$color__base-xxlight;
+}
+.text-green {
+	color:$color__green;
+}
+.bg-green {
+	background-color:$color__green;
+}
+.bb-green {
+	border-bottom: 2px solid $color__green;
+}
+.text-secondary {
+	color:$color__secondary;
+}
+.bg-secondary {
+	background-color:$color__secondary;
+}
+.bb-secondary {
+	border-bottom: 2px solid $color__secondary;
+}
+.bg-white {
+	background-color: #ffffff;
+}
+.text-white {
+	color: #ffffff;
+}
+.bg-black {
+	background-color: #000000;
+}
+.text-black {
+	color: #000000;
+}

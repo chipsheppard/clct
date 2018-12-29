@@ -1,0 +1,66 @@
+
+.top-block {
+	color: #ffffff;
+	margin-bottom: 3em;
+	padding-bottom: 3em;
+	width: 100%;
+
+	img {
+		display: block;
+	}
+
+	.entry-title {
+		width: 80%;
+
+		@include breakpoint(tablet-h) {
+			width: 100%;
+		}
+	}
+
+	.intro {
+		padding: 220px 0 2em 1.5em;
+	}
+
+	h2 {
+		margin-bottom: 1em;
+
+		@include breakpoint(tablet-m) {
+			@include font-size(3);
+		}
+
+		@include breakpoint(tablet-h) {
+			@include font-size(2.5);
+		}
+	}
+
+
+	video {
+		display: block;
+		z-index: 1;
+		min-width: 100%;
+		min-height: 100%;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.homepage, .trust, .give {
+	.top-block {
+
+		.inner-wrap {
+			padding-right: 0;
+			padding-bottom: 4em;
+
+			@include breakpoint(tablet-v) {
+				padding: 0;
+			}
+		}
+
+		@include breakpoint(tablet-v) {
+			.col-3-7 {
+				position: absolute;
+				z-index: 2;
+			}
+		}
+	}
+}

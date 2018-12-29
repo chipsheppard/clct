@@ -1,0 +1,40 @@
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.2;
+    margin: 0 0 3%;
+
+	a {
+		border-bottom: 1px solid transparent;
+		color: $color__base;
+		display: inline-block;
+
+		&:hover,
+		&:focus,
+		&:active {
+			opacity: .8;
+			border-bottom: 1px solid currentColor;
+		}
+	}
+}
+
+h1 {@include font-size(6.25);}  // 100
+h2 {@include font-size(3.875);} // 62
+h3 {@include font-size(2.75);}  // 44
+h4 {@include font-size(1.875);} // 30
+h5 {@include font-size(1.5);}   // 24
+h6 {@include font-size(1);}     // 16
+
+@include breakpoint(tablet-v) {
+	h1 {@include font-size(5.75);}  // 92
+	h2 {@include font-size(3.5);}   // 56
+	h3 {@include font-size(2.25);}  // 36
+	h4 {@include font-size(1.375);} // 22
+	h5 {@include font-size(1.25);}  // 20
+}
+
+@include breakpoint(phone-h) {
+	h1 {@include font-size(2.5);}   // 40
+	h2 {@include font-size(1.688);} // 27
+	h3 {@include font-size(1.5);}   // 24
+	h4 {@include font-size(1.25);}  // 20
+	h5 {@include font-size(1.125);} // 18
+}

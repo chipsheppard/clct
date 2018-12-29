@@ -1,0 +1,140 @@
+@include breakpoint(tablet-v) {
+	.site-navigation {
+		background-image: none;
+		clear: both;
+		display: block;
+		float: none;
+		margin-left: -5.5%;
+		margin-right: -5.5%;
+		padding-top: 0;
+		text-align: left;
+		min-width: 100%;
+		@include font-size(.875);
+
+		.mobile-nav-logo {
+			display: block;
+			text-align: right;
+			padding-right: 1em;
+
+			img {
+				max-width: 100px;
+				height: auto;
+				transition: max-height 0.2s;
+			}
+
+			a {
+				border: 0;
+			}
+
+			a:hover {
+				opacity: 0.75;
+				background: 0;
+			}
+		}
+
+		.menu-wrap {
+			display: none;
+			overflow: hidden;
+			padding: 1em 2%;
+			max-height: 0;
+			transition: all .25s ease;
+		}
+
+		&.toggled-on .menu-wrap {
+			display: block;
+			max-height: 1000px;
+		}
+
+		a {
+			display: inline;
+			padding: .25em 0;
+			position: relative;
+			width: 100%;
+		}
+
+		.menu-item-has-children > a {
+			padding-right: 0;
+		}
+
+		.menu {
+			padding: 0;
+		}
+
+		li {
+			width: auto;
+			padding: 1em;
+			text-shadow: none;
+
+			&:last-of-type {
+				width: auto;
+			}
+
+			li  {
+				display: block;
+
+				a {
+					padding-left: .5em;
+					@include font-size(.875);
+				}
+			}
+		}
+
+		li:not(.search-icon) a:before {
+			content: none;
+		}
+
+		.dropdown-toggle {
+			border-left: 1px solid $color__base-light;
+			color: #222222 !important;
+			cursor: pointer;
+			display: inline-block;
+			margin-left: 0;
+			padding: .5em 1.375em .6125em;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 2;
+
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.05);
+			}
+		}
+
+		/* SUB MENU -------------------- */
+		.sub-menu {
+			background: none;
+			border-top: 1px solid $color__base-light;
+			display: none;
+			left: auto;
+			margin-left: 0;
+			opacity: 1;
+			position: relative;
+			top: auto;
+			width: 100%;
+
+			&.toggled-on {
+				display: block;
+			}
+
+			a {
+				border: 0;
+				color: #222222 !important;
+				padding-left: 2.5em;
+				width: 100%;
+			}
+
+			button.dropdown-toggle {
+				padding: 0 1.375em .425em;
+				right: 0;
+			}
+
+			.sub-menu {
+				margin: 0;
+
+				a {
+					padding-left: 3.5em;
+				}
+			}
+		}
+	}
+}

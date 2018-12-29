@@ -1,0 +1,107 @@
+.site-footer {
+	background-color: #f6f5f3;
+	clear: both;
+	width: 100%;
+}
+
+.site-info {
+	color: #756c5c;
+	padding: 3em 0;
+	position: relative;
+	@include font-size(.875);
+
+	a {
+		color: #756c5c;
+
+		&:hover {
+			opacity: .85;;
+		}
+	}
+}
+
+.footer-widget {
+
+	margin-bottom: 2.5em;
+
+	.widget-title {
+		color: $color__brown;
+		font-weight: $font__weight-normal;
+		letter-spacing: 1px;
+		margin-bottom: 1.5em;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+
+		li {
+			padding: 0 0 .75em 0;
+
+			a {
+				width: 100%;
+				display: inline-block;
+			}
+		}
+	}
+
+	form {
+
+		input {
+			@include font-size(.875);
+		}
+
+		input[type="email"] {
+			width: 60%;
+			margin-right: 1%;
+		}
+		input[type="submit"] {
+			width: 37%;
+		}
+	}
+
+	&.address h6 {
+		margin-bottom: .25em;
+	}
+
+	&.copyright {
+		padding-top: 2em;
+
+		@include breakpoint(tablet-h) {
+			text-align: center;
+		}
+	}
+
+	&.social {
+		padding-top: 2em;
+		text-align: right;
+
+		a {
+			color: $color__tan;
+			margin-left: 1.5em;
+
+			&:first-of-type {
+				margin-left: 0;
+			}
+		}
+
+		@include breakpoint(tablet-h) {
+			text-align: center;
+		}
+	}
+
+	&.foot-logo {
+		text-align: right;
+
+		img {
+			width: 130px;
+		}
+
+		@include breakpoint(tablet-v) {
+			text-align: center;
+
+			img {
+				width: auto;
+			}
+		}
+	}
+}
