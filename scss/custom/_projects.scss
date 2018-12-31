@@ -1,0 +1,39 @@
+
+.single-project {
+
+	.fi {
+		margin: 40px 0 0 100px;
+	}
+	.featured-image {
+		display: block;
+	}
+}
+
+.projects-footer {
+	background-color: $color__blue;
+	color: #ffffff;
+	font-family: $font__sans;
+	padding: 8em 1em 5em;
+	@include font-size(.875);
+
+	a {
+		border-bottom: 2px solid $color__green-lt;
+		color: #ffffff;
+		float: right;
+		font-weight: $font__weight-bold;
+		padding-top: 1em;
+
+		&:hover {
+			opacity: .75;
+		}
+	}
+
+	h3 {
+		font-family: $font__main;
+	}
+	h4 {
+		@include font-size(1.25);
+		font-family: $font__main;
+		margin-top: 2em;
+	}
+}

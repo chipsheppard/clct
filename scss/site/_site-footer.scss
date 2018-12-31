@@ -6,7 +6,7 @@
 
 .site-info {
 	color: #756c5c;
-	padding: 3em 0;
+	padding: 5em 0 3em;
 	position: relative;
 	@include font-size(.875);
 
@@ -64,7 +64,9 @@
 	}
 
 	&.copyright {
-		padding-top: 2em;
+		padding-top: 3em;
+		font-family: $font__sans;
+		@include font-size(.688);
 
 		@include breakpoint(tablet-h) {
 			text-align: center;

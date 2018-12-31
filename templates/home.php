@@ -23,13 +23,33 @@ function clct_home() {
 	?>
 
 	<div class="inner-wrap">
-		Image - Land & Properties
-		<br>
-		Smaller image 900 - big image
-		<br><br>
-		2 Properties
-		<br>
-		Featured Property
+
+		<div>
+			<img src="" width="" height="" alt="">
+			<div></div>
+		</div>
+
+		<div>
+			<header class="entry-header">
+				<h1><?php the_title(); ?></h1>
+			</header>
+
+			<div class="entry-content">
+				<?php the_content(); ?>
+			</div>
+		</div>
+
+		<div>
+			<img src="" width="" height="" alt="">
+			<div>900</div>
+			<p></p>
+		</div>
+
+		<div>
+			<img src="" width="" height="" alt="">
+			<div></div>
+		</div>
+
 	</div>
 
 	<?php

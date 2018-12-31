@@ -62,11 +62,14 @@ tha_entry_content_before();
 if ( is_singular() ) : // single posts, attachments, pages, custom post types.
 
 	echo '<div class="inner-wrap">';
+
 	the_content();
+
 	wp_link_pages( array(
 		'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'clct' ),
 		'after'  => '</div>',
 	) );
+
 	echo '</div>';
 
 else : // archives & search.

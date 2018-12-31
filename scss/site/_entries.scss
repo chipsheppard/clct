@@ -28,7 +28,7 @@
 .page .entry-title,
 .single .entry-title {
 	line-height: 1.2;
-	margin: 3em 0 .5em;
+	margin: 0;
 	@include font-size(3.875);
 
 	@include breakpoint(phone-h) {
@@ -36,7 +36,23 @@
 	}
 }
 
-.single .hentry {
+.page .entry-header,
+.single .entry-header {
+	color: #ffffff;
+	margin: 200px 0 0 30px;
+	position: relative;
+	z-index: 3;
+
+	a {
+		border-bottom: 1px solid currentColor;
+		color: #ffffff;
+		font-weight: $font__weight-bold;
+		padding-bottom: 3px;
+		@include font-size(.875);
+	}
+}
+
+.single:not(.single-project):not(.single-land) .hentry {
 	margin-bottom: 4em;
 }
 
@@ -78,5 +94,4 @@
 	dd {
 		margin: 0 1em 1em;
 	}
-
 }

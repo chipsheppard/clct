@@ -6,7 +6,7 @@
 	}
 
 	.menu {
-		padding: 2em;
+		padding: 2em 0;
 	}
 
 	li {
@@ -40,7 +40,7 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-		opacity: .85;
+		opacity: .75;
 	}
 
 	.menu-item-has-children > a {
@@ -93,6 +93,7 @@
 	}
 }
 
+/* sub menu TOGGLE ICONS -------------------- */
 button.dropdown-toggle {
 	border: 0;
 	background: none;
@@ -129,6 +130,7 @@ button.dropdown-toggle.toggled-on:after {
 	padding: 0;
 }
 
+/* MENU SHADOW -------------------- */
 .homepage, .trust, .give {
 	.site-navigation .menu-wrap {
 		position: relative;

@@ -1,24 +1,12 @@
 
 .top-block {
 	color: #ffffff;
-	margin-bottom: 3em;
+	margin-bottom: 5em;
 	padding-bottom: 3em;
 	width: 100%;
 
 	img {
 		display: block;
-	}
-
-	.entry-title {
-		width: 80%;
-
-		@include breakpoint(tablet-h) {
-			width: 100%;
-		}
-	}
-
-	.intro {
-		padding: 220px 0 2em 1.5em;
 	}
 
 	h2 {
@@ -42,6 +30,28 @@
 		width: 100%;
 		height: auto;
 	}
+
+	.entry-title {
+		width: 80%;
+
+		@include breakpoint(tablet-h) {
+			width: 100%;
+		}
+	}
+
+	.intro {
+		padding: 220px 0 2em 1.5em;
+	}
+
+	.return {
+		font-family: $font__sans;
+		padding-bottom: .5em;
+
+		&:hover {
+			opacity: .75;
+		}
+	}
+
 }
 
 .homepage, .trust, .give {

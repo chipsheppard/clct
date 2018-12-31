@@ -118,12 +118,6 @@ add_action( 'after_setup_theme', 'clct_setup' );
 
 
 /**
- * Make the TEXT editor the default.
- */
-add_filter( 'wp_default_editor', create_function( '', 'return "html";' ) );
-
-
-/**
  * Limit the number of post revisions.
  *
  * @param string $num The number of post revisions to keep.
@@ -135,6 +129,14 @@ function clct_set_revision_max( $num, $post ) {
 }
 add_filter( 'wp_revisions_to_keep', 'clct_set_revision_max', 10, 2 );
 
+// ACF Options.
+if ( function_exists( 'acf_add_options_page' ) ) {
+
+	acf_add_options_page();
+	acf_add_options_sub_page( 'Projects Footer' );
+	acf_add_options_sub_page( 'Regulations' );
+
+}
 
 // Load Jetpack compatibility file.
 if ( defined( 'JETPACK__VERSION' ) ) {

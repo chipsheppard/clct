@@ -14,21 +14,6 @@ HEADROOM
   transform: translateY(-100%);
 }
 
-/*.headroom--top .spacer {
-	height: 0px;
-	display: none;
-}
-.headroom--not-top .spacer {
-	height: 64px;
-	display: block;
-}
-@include breakpoint(tablet-min-v) {
-	.headroom--not-top .spacer {
-		height: 390px;
-		display: block;
-	}
-}*/
-
 .stuck-logo {
 	display: none;
 }
@@ -95,12 +80,16 @@ SCROLLED HEADER
 				}
 
 				a {
-					border-bottom: 1px solid transparent;
+					border-bottom: 1px solid #cac3b7;
 					color: #000000;
 					line-height: 1.2;
 					margin: 0 .5em;
 					padding: .125em 0;
 					@include font-size(1.375);
+
+					&:hover {
+						border-width: 2px;
+					}
 				}
 				li.land a:hover {
 					border-color: $color__green-lt;

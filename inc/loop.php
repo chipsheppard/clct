@@ -26,7 +26,7 @@ function clct_default_loop() {
 			the_post();
 
 			tha_entry_before();
-			if ( is_page_template( array( 'templates/home.php', 'templates/give.php', 'templates/land.php', 'templates/projects.php', 'templates/trust.php', 'templates/single-land.php', 'templates/single-project.php', '404.php' ) ) ) :
+			if ( is_page_template( array( 'templates/home.php', 'templates/give.php', 'templates/land.php', 'templates/projects.php', 'templates/trust.php', '404.php' ) ) || is_singular( 'land' ) || is_singular( 'project' ) ) :
 				get_template_part( 'template-parts/content', 'acf' );
 			else :
 				get_template_part( 'template-parts/content', get_post_format() );
@@ -108,7 +108,7 @@ add_action( 'tha_content_while_after', 'clct_postpagination', 10 );
  */
 function clct_postnav() {
 
-	if ( is_single() ) :
+	if ( is_single( 'post' ) ) :
 		echo '<div class="inner-wrap">';
 
 		the_post_navigation( array(

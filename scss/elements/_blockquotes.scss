@@ -10,31 +10,35 @@ q:after {
 
 blockquote {
 	background: #ffffff;
-	box-shadow: 0px 0px 8px $color__base-xlight;
-	margin: .75em 1.5em 1.5em 0;
-	padding: 1.5em 2em 1.5em 3.5em;
+	line-height: 1.4;
+	margin: .75em auto 1.5em;
+	padding: 1.5em 3.5em;
 	position: relative;
 	quotes: "\201C""\201D""\201C""\201D";
+	@include font-size(1.625);
 
 	@include breakpoint(phone-h) {
-		padding: 1.25em 1.25em 1.25em 2.5em;
+		padding: 1.25em 2.5em;
 	}
 
+	&:before,
 	&:after {
 		content: "";
+		display: block;
+		font-family: Georgia, serif;
+		height: 0;
+		position: absolute;
+		top: 25%;
+		@include font-size(3.75);
 	}
 
 	&:before {
-		display: block;
 		content: "\201C";
-		font-family: Georgia, serif;
-		color: $color__base-light;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: .25em;
-		@include font-size(3.75);
-
+		left: -1em;
+	}
+	&:after {
+		content: "\201D";
+		right: -1em;
 	}
 
 	cite {
