@@ -12,12 +12,12 @@
 ?>
 <div class="projmod projmod-quote">
 <div class="inner-wrap">
-	<div class="col-1-4 first">&nbsp;</div>
+	<div class="col-1-4 first desktop-only">&nbsp;</div>
 	<div class="col-1-2">
 		<blockquote>
 			<?php the_sub_field( 'quote' ); ?>
 		</blockquote>
 	</div>
-	<div class="col-1-4">&nbsp;</div>
+	<div class="col-1-4 desktop-only">&nbsp;</div>
 </div>
 </div>

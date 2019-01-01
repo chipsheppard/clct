@@ -20,13 +20,10 @@ function clct_project() {
 	<div class="top-block">
 	<div class="inner-wrap">
 
-		<div class="col-2-3 first">
-			<header class="entry-header">
-				<div class="return"><a href="/projects-events/">View all projects</a></div>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-			</header>
-		</div>
-		<div class="cf"></div>
+		<header class="entry-header">
+			<div class="return"><a href="/projects-events/">View all projects</a></div>
+			<h1 class="entry-title"><?php the_title(); ?></h1>
+		</header>
 		<?php
 		if ( has_post_thumbnail() ) :
 			echo '<div class="fi">';
@@ -42,6 +39,7 @@ function clct_project() {
 
 	<?php get_template_part( 'template-parts/project', 'modules' ); ?>
 
+	<!-- ACF OPTIONS - project footer -->
 	<div class="projects-footer">
 		<div class="inner-wrap">
 			<?php

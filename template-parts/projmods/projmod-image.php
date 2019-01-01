@@ -26,7 +26,7 @@ endif;
 <div class="inner-wrap">
 
 <?php if ( $image ) : ?>
-	<div class="col-1-6 first">&nbsp;</div>
+	<div class="col-1-6 first desktop-only">&nbsp;</div>
 	<div class="col-2-3 projmod-image-image">
 		<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
 	</div>

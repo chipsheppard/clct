@@ -4,7 +4,6 @@
 	img {
 		display: block;
 		max-width: 100%;
-		//width: 100%;
 	}
 }
 
@@ -12,7 +11,12 @@
 
 	blockquote {
 		padding: 0;
-		margin: 0 2.5em;
+		margin-right: 2.5em;
+		margin-left: 0;
+
+		@include breakpoint(tablet-v) {
+			margin-right: 0;
+		}
 	}
 }
 
@@ -29,29 +33,68 @@
 	margin-top: 140px;
 }
 
-@include breakpoint (table-v) {
+@include breakpoint(tablet-v) {
 	.up40,
 	.dn40,
 	.dn140 {
-		margin-top: 20px;
+		margin-top: 24px;
 	}
 }
 
 .projmod-image-image {
 	margin-bottom: 2em;
+
+	@include breakpoint(tablet-v) {
+		margin: 0 0 0 -3%;
+		width: 106%;
+	}
+
+	img {
+		display: block;
+
+		@include breakpoint(tablet-v) {
+			width: 100%;
+			max-width: none;
+		}
+	}
 }
 
 .projmod-content-left {
 	position: relative;
 	left: -40px;
+
+	@include breakpoint(tablet-v) {
+		left: 0;
+		text-align: right;
+		margin-bottom: 2em;
+
+		img {
+			display: inline-block;
+		}
+	}
 }
+
+.projmod-content-right {
+
+	@include breakpoint(tablet-v) {
+		img {
+			display: inline-block;
+		}
+	}
+}
+
 .projmod-content-text {
 	padding: 0 4em 0 0;
 
 	p:last-of-type {
 		margin: 0;
 	}
+
+	@include breakpoint(tablet-v) {
+		padding-right: 0;
+	}
 }
+
 .projmod-content-left-caption,
 .projmod-content-right-caption,
 .projmod-image-image-caption {
@@ -78,6 +121,7 @@
 		@include font-size(3.5);
 
 		@include breakpoint(tablet-v) {
+			padding: 0;
 			@include font-size(2.5);
 		}
 		@include breakpoint(phone-h) {

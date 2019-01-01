@@ -75,12 +75,6 @@
 }
 
 
-.sidebar-right .wp-block-image.alignfull,
-.sidebar-left .wp-block-image.alignfull {
-	margin-left: calc(20% - 20vw);
-	margin-right: calc(80% - 80vw);
-}
-
 .wp-block-cover-image {
 
 	&.alignleft {
@@ -128,8 +122,12 @@
 
 .wp-block-quote.is-large,
 .wp-block-quote.is-style-large {
- 	margin: 0 0 1.5em;
- 	padding: 1.5em 2em 1.5em 3.5em;
+	margin: .75em 2.5em 1.5em;
+	padding: 1.5em 0;
+	@include breakpoint(tablet-v) {
+		padding: 0;
+		margin: 3em 1.5em;
+	}
 }
 
 /*

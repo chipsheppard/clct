@@ -9,12 +9,16 @@
  * @license  GPL-2.0+
  */
 
-if ( get_sub_field( 'image_left_offset' ) ) :
+if ( get_sub_field( 'image_left' ) && get_sub_field( 'image_left_offset' ) ) :
 	$l = get_sub_field( 'image_left_offset' );
+else :
+	$l = 'desktop-only';
 endif;
 
-if ( get_sub_field( 'image_right_offset' ) ) :
+if ( get_sub_field( 'image_right' ) && get_sub_field( 'image_right_offset' ) ) :
 	$r = get_sub_field( 'image_right_offset' );
+else :
+	$r = 'desktop-only';
 endif;
 
 $imageleft = get_sub_field( 'image_left' );
@@ -45,39 +49,53 @@ endif;
 <div class="projmod projmod-content">
 <div class="inner-wrap">
 
-	<div class="col-1-4 first projmod-content-left <?php echo esc_attr( $l ); ?>">
+<div class="col-1-4 first projmod-content-left<?php if ( $l ) : ?>
+<?php
+echo ' ' . esc_attr( $l );
+endif;
+?>
+">
+	<?php
+	if ( $imageleft ) :
+	?>
+		<img src="<?php echo esc_url( $lurl ); ?>" alt="<?php echo esc_attr( $lalt ); ?>" width="<?php echo esc_attr( $lwidth ); ?>" height="<?php echo esc_attr( $lheight ); ?>" />
 		<?php
-		if ( $imageleft ) :
-		?>
-			<img src="<?php echo esc_url( $lurl ); ?>" alt="<?php echo esc_attr( $lalt ); ?>" width="<?php echo esc_attr( $lwidth ); ?>" height="<?php echo esc_attr( $lheight ); ?>" />
-			<?php
+		if ( $lcaption ) :
 			echo '<div class="projmod-content-left-caption caption">';
 			echo esc_html( $lcaption );
 			echo '</div>';
-		else :
-			echo '&nbsp;';
 		endif;
-		?>
-	</div>
+	else :
+		echo '&nbsp;';
+	endif;
+	?>
+</div>
 
-	<div class="col-1-2 projmod-content-text">
-		<?php the_sub_field( 'text' ); ?>
-	</div>
+<div class="col-1-2 projmod-content-text">
+	<?php the_sub_field( 'text' ); ?>
+</div>
 
-	<div class="col-1-4 projmod-content-right <?php echo esc_attr( $r ); ?>">
+<div class="col-1-4 projmod-content-right<?php if ( $r ) : ?>
+<?php
+echo ' ' . esc_attr( $r );
+endif;
+?>
+">
+	<?php
+	if ( $imageright ) :
+	?>
+		<img src="<?php echo esc_url( $rurl ); ?>" alt="<?php echo esc_attr( $ralt ); ?>" width="<?php echo esc_attr( $rwidth ); ?>" height="<?php echo esc_attr( $rheight ); ?>" />
 		<?php
-		if ( $imageright ) :
-		?>
-			<img src="<?php echo esc_url( $rurl ); ?>" alt="<?php echo esc_attr( $ralt ); ?>" width="<?php echo esc_attr( $rwidth ); ?>" height="<?php echo esc_attr( $rheight ); ?>" />
-			<?php
+		if ( $rcaption ) :
 			echo '<div class="projmod-content-right-caption caption">';
 			echo esc_html( $rcaption );
 			echo '</div>';
-		else :
-			echo '&nbsp;';
 		endif;
-		?>
-	</div>
+	else :
+		echo '&nbsp;';
+	endif;
+	?>
+</div>
 
 </div>
 </div>

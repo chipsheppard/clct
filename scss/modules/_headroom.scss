@@ -24,7 +24,7 @@ SCROLLED HEADER
 --------------------------- */
 .headroom--not-top .site-header {
 	position:fixed;
-	z-index: 99;
+	z-index: 9;
 	background-color: #ffffff;
 }
 
@@ -91,16 +91,20 @@ SCROLLED HEADER
 						border-width: 2px;
 					}
 				}
-				li.land a:hover {
+				li.land a:hover,
+				li.land.current-menu-item a {
 					border-color: $color__green-lt;
 				}
-				li.trust a:hover {
+				li.trust a:hover,
+				li.trust.current-menu-item a {
 					border-color: $color__blue-lt;
 				}
-				li.projects a:hover {
+				li.projects a:hover,
+				li.projects.current-menu-item a {
 					border-color: $color__olive-lt;
 				}
-				li.give a:hover {
+				li.give a:hover,
+				li.give.current-menu-item a {
 					border-color: $color__brown-lt;
 				}
 			}

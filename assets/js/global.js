@@ -109,16 +109,6 @@
 
 /*
  * MY Headroom
-var myElement = document.querySelector(".site");
-var headroom  = new Headroom(myElement, {
-  "offset": 270,
-  "tolerance": 5
-});
-headroom.init();
-*/
-
-/*
- * MY Headroom
  */
 function myFunction(x) {
 	var header = document.getElementById('page');
@@ -136,6 +126,28 @@ function myFunction(x) {
 		headroom.init();
 	}
 }
-var x = window.matchMedia("(max-width: 768px)")
-myFunction(x) // Call listener function at run time
-x.addListener(myFunction) // Attach listener function on state changes
+var x = window.matchMedia("(max-width: 768px)");
+myFunction(x); // Call listener function at run time
+x.addListener(myFunction); // Attach listener function on state changes
+
+
+
+/*
+ * Project List show/hide
+ */
+ jQuery(function( $ ){
+	 $('.l').hide();
+	$( '.cssicon-plusminus' ).click(function() {
+		if ( $(this).hasClass( 'plus' ) ) {
+			$(this).removeClass( 'plus' );
+			$(this).addClass( 'minus' );
+			$('.m').hide();
+			$('.l').show();
+		} else {
+			$(this).removeClass( 'minus' );
+			$(this).addClass( 'plus' );
+			$('.l').hide();
+			$('.m').show();
+		}
+ 	} );
+ } );

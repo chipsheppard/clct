@@ -139,3 +139,37 @@
 	width: 100%;
 	@include font-size(2.25);
 }
+
+
+.cssicon-plusminus {
+	border: 2px solid #ffffff;
+    border-radius: 50%;
+	color: #ffffff;
+	cursor: pointer;
+    margin: 0;
+	text-indent: 0;
+
+	&.plus {
+	    background-color: #6d7e69;
+		padding: .5em .5em 0;
+	}
+	&.minus {
+		background-color: #6d7e69;
+		padding: .438em .5em 0;
+	}
+	&.plus:before,
+	&.minus:before {
+		display: inline-block;
+		line-height: .5;
+		position: relative;
+		@include font-size(3);
+	}
+	&.plus:before {
+		content: '+';
+		top: 6px;
+	}
+	&.minus:before {
+		content: '–'; // n-dash.
+		top: 4px;
+	}
+}

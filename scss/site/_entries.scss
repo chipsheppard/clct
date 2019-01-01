@@ -25,30 +25,49 @@
 	margin: 1em 0 0;
 }
 
-.page .entry-title,
-.single .entry-title {
-	line-height: 1.2;
-	margin: 0;
-	@include font-size(3.875);
+.page,
+.single {
 
-	@include breakpoint(phone-h) {
-		@include font-size(1.688);
+	.entry-header {
+		color: #ffffff;
+		margin: 200px 0 0 30px;
+		width: 68%; // projects needs 68%
+
+		@include breakpoint(tablet-v) {
+			margin: 120px 0 0;
+			width: 100%;
+		}
+
+		a {
+			border-bottom: 1px solid currentColor;
+			color: #ffffff;
+			font-weight: $font__weight-bold;
+			padding-bottom: 3px;
+			@include font-size(.875);
+		}
+	}
+
+	.entry-meta {
+		margin-left: 30px;
+
+		@include breakpoint(tablet-v) {
+			margin-left: 0;
+		}
+	}
+	.entry-footer {
+		margin-top: 2em;
 	}
 }
 
-.page .entry-header,
-.single .entry-header {
-	color: #ffffff;
-	margin: 200px 0 0 30px;
-	position: relative;
-	z-index: 3;
+.single {
+	.entry-title {
+		line-height: 1.2;
+		margin: 0;
+		@include font-size(3.875);
 
-	a {
-		border-bottom: 1px solid currentColor;
-		color: #ffffff;
-		font-weight: $font__weight-bold;
-		padding-bottom: 3px;
-		@include font-size(.875);
+		@include breakpoint(phone-h) {
+			@include font-size(1.688);
+		}
 	}
 }
 

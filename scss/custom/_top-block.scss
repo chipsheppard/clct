@@ -3,7 +3,15 @@
 	color: #ffffff;
 	margin-bottom: 5em;
 	padding-bottom: 3em;
+	min-height: 420px;
 	width: 100%;
+
+	@include breakpoint(tablet-m) {
+		margin-bottom: 1em;
+	}
+	@include breakpoint(tablet-v) {
+		min-height: auto;
+	}
 
 	img {
 		display: block;
@@ -31,16 +39,15 @@
 		height: auto;
 	}
 
-	.entry-title {
-		width: 80%;
-
-		@include breakpoint(tablet-h) {
-			width: 100%;
-		}
-	}
-
 	.intro {
 		padding: 220px 0 2em 1.5em;
+	}
+
+	.entry-title,
+	.entry-meta,
+	.return {
+		position: relative;
+		z-index: 2;
 	}
 
 	.return {

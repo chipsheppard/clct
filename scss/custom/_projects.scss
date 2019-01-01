@@ -1,8 +1,130 @@
+.projects {
+
+	.top-left {
+
+		margin-top: 30px;
+		padding: 100px 0 0 40px;
+
+		@include breakpoint(tablet-v) {
+			padding: 0;
+		}
+
+		a {
+			border-bottom: 1px solid #ffffff;
+			color: #ffffff;
+			font-family: $font__sans;
+			font-weight: $font__weight-bold;
+
+			&:hover {
+				opacity: .75;
+			}
+		}
+	}
+
+	.featured-project {
+		margin-top: 30px;
+		position: relative;
+		right: -4em;
+
+		@include breakpoint(tablet-v) {
+			right: 0;
+		}
+
+		.fp-title {
+			margin-top: 2em;
+			padding-left: 2em;
+
+			@include breakpoint(tablet-v) {
+				padding-left: 0;
+			}
+		}
+		.fp-content {
+			margin-top: 2em;
+			padding-right: 4em;
+
+			@include breakpoint(tablet-v) {
+				margin-top: 1em;
+				padding: 0;
+			}
+		}
+
+		h3 {
+			a {
+				color: $color__yellow;
+				border: none;
+			}
+		}
+
+		img {
+			width: 100%;
+
+			@include breakpoint(tablet-v) {
+				width: 106%;
+				margin-left: -3%;
+				max-width: none;
+			}
+		}
+	}
+}
+
+.project-list-wrap {
+	margin-top: 6em;
+
+	.view-all {
+		float: right;
+		text-align: center;
+		width:16%;
+	}
+	.view-text {
+		font-family: $font__sans;
+		font-weight: $font__weight-bold;
+		margin-top: .75em;
+		@include font-size(.875);
+	}
+}
+
+.project-list {
+	display: inline-block;
+	width: 80%;
+
+	.proj-block {
+		float: left;
+		margin-right: 3.5%;
+		width: 31%;
+
+		@include breakpoint(tablet-v) {
+			float: none;
+			width: 100%;
+		}
+
+		&:nth-child(3) {
+			margin-right: 0;
+		}
+
+		h4 a {
+			color: $color__yellow;
+		}
+
+		.excerpt {
+			border-bottom: 1px solid currentColor;
+			margin: 1em 0 1.5em;
+			@include font-size(.875);
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
 
 .single-project {
 
 	.fi {
 		margin: 40px 0 0 100px;
+
+		@include breakpoint(tablet-v) {
+			margin: 6% -3% 0;
+		}
 	}
 	.featured-image {
 		display: block;
@@ -14,6 +136,7 @@
 	color: #ffffff;
 	font-family: $font__sans;
 	padding: 8em 1em 5em;
+	margin-top: 2em;
 	@include font-size(.875);
 
 	a {
