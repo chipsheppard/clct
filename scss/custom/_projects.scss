@@ -65,13 +65,21 @@
 			}
 		}
 	}
+
+	.proj-block {
+		h4 a {
+			color: $color__yellow;
+		}
+	}
 }
 
 .project-list-wrap {
 	margin-top: 6em;
+	padding: 6em 0 1em;
 
 	.view-all {
 		float: right;
+		line-height: 1;
 		text-align: center;
 		width:16%;
 	}
@@ -81,6 +89,13 @@
 		margin-top: .75em;
 		@include font-size(.875);
 	}
+	.vm {
+		display: inline-block;
+	}
+}
+
+.view-all a:hover .cssicon-arrow-r {
+	background-color: $color__olive;
 }
 
 .project-list {
@@ -90,10 +105,13 @@
 	.proj-block {
 		float: left;
 		margin-right: 3.5%;
+		margin-bottom: 2.5em;
 		width: 31%;
 
 		@include breakpoint(tablet-v) {
 			float: none;
+			margin-right: 0;
+			margin-bottom: 3.5em;
 			width: 100%;
 		}
 
@@ -101,8 +119,9 @@
 			margin-right: 0;
 		}
 
-		h4 a {
-			color: $color__yellow;
+		img {
+			display: block;
+			//width: 100%;
 		}
 
 		.excerpt {
@@ -114,6 +133,10 @@
 				margin-bottom: 0;
 			}
 		}
+	}
+
+	&.extended {
+		display: none;
 	}
 }
 
@@ -129,6 +152,10 @@
 	.featured-image {
 		display: block;
 	}
+
+	.project-list-wrap {
+		background-color: #f5f5f3;
+	}
 }
 
 .projects-footer {
@@ -136,7 +163,6 @@
 	color: #ffffff;
 	font-family: $font__sans;
 	padding: 8em 1em 5em;
-	margin-top: 2em;
 	@include font-size(.875);
 
 	a {

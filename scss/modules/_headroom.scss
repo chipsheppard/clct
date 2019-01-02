@@ -32,7 +32,7 @@ SCROLLED HEADER
 	.headroom--not-top .site-header {
 
 		.header-wrap {
-			border-bottom: 5px solid #cac3b7;
+			border-bottom: 5px solid $color__beige;
 
 			.site-branding {
 				padding-bottom: 0;
@@ -80,7 +80,7 @@ SCROLLED HEADER
 				}
 
 				a {
-					border-bottom: 1px solid #cac3b7;
+					border-bottom: 1px solid $color__beige;
 					color: #000000;
 					line-height: 1.2;
 					margin: 0 .5em;
@@ -105,7 +105,7 @@ SCROLLED HEADER
 				}
 				li.give a:hover,
 				li.give.current-menu-item a {
-					border-color: $color__brown-lt;
+					border-color: $color__brick-lt;
 				}
 			}
 		}

@@ -49,14 +49,26 @@ input[type="submit"] {
 		border: 0;
 	}
 
+	&.alt {
+		background-color: $color__tan-lt;
+		border-color: $color__green;
+		color: $color__green;
+
+		&:hover, &:focus, &:active {
+			background-color: $color__green;
+			color:  #ffffff;
+			border-color: $color__green-lt;
+		}
+	}
+
 	&.brown {
-		background-color: #af8466;
+		background-color: $color__brown-lt;
 		border-color: #ffffff;
 
 		&:hover, &:focus, &:active {
 			background-color: #ffffff;
-			border-color: #af8466;
-			color: #af8466;
+			border-color: $color__brown-lt;
+			color: $color__brown-lt;
 		}
 	}
 	&.blue {

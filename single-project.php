@@ -39,6 +39,52 @@ function clct_project() {
 
 	<?php get_template_part( 'template-parts/project', 'modules' ); ?>
 
+
+	<div class="project-list-wrap">
+		<div class="inner-wrap">
+			<div class="view-all">
+				<a href="/projects-events/" class="vm">
+				<div class="cssicon-arrow-r"></div>
+				<div class="view-text">View more</div>
+				</a>
+			</div>
+			<div class="project-list">
+				<?php
+				$query = new WP_Query( array(
+					'post_type' => 'project',
+					'posts_per_page' => 3,
+					'order' => 'DESC',
+					'orderby' => 'date',
+				) );
+
+				if ( $query->have_posts() ) {
+					while ( $query->have_posts() ) :
+						$query->the_post();
+						echo '<div class="proj-block">';
+
+						if ( has_post_thumbnail() ) :
+							echo '<div class="proj-thumb">';
+							the_post_thumbnail( 'medium' );
+							echo '</div>';
+						endif;
+
+						?>
+						<div class="excerpt"><?php the_excerpt(); ?></div>
+						<h4><a href="<?php the_permalink(); ?>" title="<?php esc_attr( the_title_attribute() ); ?>"><?php the_title(); ?></a></h4>
+					</div>
+					<?php
+					endwhile;
+					wp_reset_postdata();
+				}
+				?>
+				<div class="cf"></div>
+			</div><!-- /projects-list -->
+
+		</div><!-- /inner-wrap -->
+	</div><!-- /project-list-wrap -->
+
+
+
 	<!-- ACF OPTIONS - project footer -->
 	<div class="projects-footer">
 		<div class="inner-wrap">

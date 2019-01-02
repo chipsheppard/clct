@@ -143,11 +143,13 @@ x.addListener(myFunction); // Attach listener function on state changes
 			$(this).addClass( 'minus' );
 			$('.m').hide();
 			$('.l').show();
+			$('.extended').slideDown(200);
 		} else {
 			$(this).removeClass( 'minus' );
 			$(this).addClass( 'plus' );
 			$('.l').hide();
 			$('.m').show();
+			$('.extended').slideUp(200);
 		}
  	} );
  } );

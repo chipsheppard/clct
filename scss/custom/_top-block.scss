@@ -7,7 +7,7 @@
 	width: 100%;
 
 	@include breakpoint(tablet-m) {
-		margin-bottom: 1em;
+		margin-bottom: 3em;
 	}
 	@include breakpoint(tablet-v) {
 		min-height: auto;

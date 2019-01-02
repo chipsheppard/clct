@@ -17,7 +17,7 @@
 .woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button{
-	background-color: $color__highlight;
+	background-color: $color__green;
 	color: #ffffff;
 	border: 0;
 	border-radius: 6px;
@@ -29,7 +29,7 @@
 // ln. 687
 	&:hover {
 		color: #ffffff;
-		background-color: $color__secondary;
+		background-color: $color__blue;
 	}
 
 	&:focus,
@@ -49,10 +49,10 @@
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt{
-	background-color: $color__secondary;
+	background-color: $color__blue;
 // ln. 704
 	&:hover {
-		background-color: #dd0000;
+		background-color: $color__blue-lt;
 	}
 }
 

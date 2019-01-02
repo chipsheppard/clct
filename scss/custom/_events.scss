@@ -1,0 +1,98 @@
+.events-block {
+	h2 {
+		color: $color__beige;
+		width: 62%;
+		@include font-size(4.1875);
+
+		@include breakpoint(tablet-h) {
+			width: 80%;
+		}
+		@include breakpoint(tablet-v) {
+			width: 100%;
+			@include font-size(3);
+		}
+	}
+
+}
+
+.events {
+	margin-bottom: 2em;
+}
+
+.event-row {
+	padding: 2.5em 0 1em;
+
+	&:nth-of-type(odd) {
+		background-color: #f1f1ef;
+	}
+
+	@include breakpoint(tablet-v) {
+		padding-bottom: 2.5em;
+	}
+
+	p {
+		margin-bottom: 1.2em;
+	}
+}
+
+.event-titles {
+	padding-right: 2em;
+	@include breakpoint(tablet-v) {
+		padding-right: 0;
+	}
+}
+.event-sub-title {
+	border-bottom: 1px solid #b5ac9e;
+	color: #3d4644;
+	font-family: $font__sans;
+	margin: 0 0 1.5em;
+	@include font-size(.875);
+}
+.event-title {
+	color: $color__green;
+	@include font-size(1.625);
+}
+.event-text {
+	color: #3d4644;
+	font-family: $font__sans;
+	@include font-size(.875);
+}
+.event-time {
+	color: #3d4644;
+	padding-bottom: 1.5em;
+}
+.event-link {
+	text-align: center;
+
+	.elink:not(.btn) {
+		border-bottom: 1px solid $color__green;
+		color: $color__green;
+		font-weight: $font__weight-bold;
+		display: inline-block;
+		font-family: $font__sans;
+		@include font-size(.875);
+
+		&:hover {
+			opacity: .75;
+		}
+	}
+}
+
+.no-events {
+	background-color: #ffffff;
+	border-bottom: 2px solid $color__green;
+	color: $color__beige;
+	padding: 1em 2em;
+	margin-top: -2.75em;
+	box-shadow: 0 0 24px rgba(0,0,0,.2);
+	text-align: center;
+	@include font-size(3.5);
+}
+
+.events-footnote {
+	color: #8a8681;
+	font-family: $font__sans;
+	padding: 1em 0;
+	margin-bottom: 3em;
+	@include font-size(.75);
+}

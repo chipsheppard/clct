@@ -1,20 +1,21 @@
-body,
-button,
-input,
-select,
-textarea {
+body {
 	font-family: $font__main;
 }
 
-h1, h2, h3, h4, h5, h6,.site-title {
-	font-weight: $font__weight-normal;
-}
-
+button,
+input,
+select,
+textarea,
+blockquote,
+.btn,
 .sans,
 .site-navigation,
 .site-info p,
 .social,
-.caption,
-blockquote {
+.caption {
 	font-family: $font__sans;
+}
+
+h1, h2, h3, h4, h5, h6,.site-title {
+	font-weight: $font__weight-normal;
 }

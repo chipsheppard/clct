@@ -142,6 +142,7 @@
 
 
 .cssicon-plusminus {
+    background-color: #6d7e69;
 	border: 2px solid #ffffff;
     border-radius: 50%;
 	color: #ffffff;
@@ -150,12 +151,10 @@
 	text-indent: 0;
 
 	&.plus {
-	    background-color: #6d7e69;
-		padding: .5em .5em 0;
+		padding: .5em .5em .375em;
 	}
 	&.minus {
-		background-color: #6d7e69;
-		padding: .438em .5em 0;
+		padding: .438em .5em .375em;
 	}
 	&.plus:before,
 	&.minus:before {
@@ -166,10 +165,44 @@
 	}
 	&.plus:before {
 		content: '+';
-		top: 6px;
+		top: 7px;
 	}
 	&.minus:before {
 		content: '–'; // n-dash.
-		top: 4px;
+		top: 5px;
 	}
+}
+
+.cssicon-arrow-r {
+	background-color: $color__base-light;
+	border: 2px solid $color__olive;
+    border-radius: 50%;
+	color: #ffffff;
+	text-indent: 0;
+	margin-top: 0;
+	margin-left: 0;
+	width: 42px;
+	height: 42px;
+}
+
+.cssicon-arrow-r:before {
+	content: '';
+	position: absolute;
+	top: 23px;
+	left: 12px;
+	width: 15px;
+	height: 2px;
+	background-color: currentColor;
+	transform: rotate(-45deg);
+}
+
+.cssicon-arrow-r:after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 13px;
+  width: 15px;
+  height: 2px;
+  background-color: currentColor;
+  transform: rotate(45deg);
 }
