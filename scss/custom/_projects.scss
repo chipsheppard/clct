@@ -83,12 +83,14 @@
 		text-align: center;
 		width:16%;
 	}
+	
 	.view-text {
 		font-family: $font__sans;
 		font-weight: $font__weight-bold;
 		margin-top: .75em;
 		@include font-size(.875);
 	}
+
 	.vm {
 		display: inline-block;
 	}
@@ -149,6 +151,7 @@
 			margin: 6% -3% 0;
 		}
 	}
+
 	.featured-image {
 		display: block;
 	}
@@ -180,6 +183,7 @@
 	h3 {
 		font-family: $font__main;
 	}
+
 	h4 {
 		@include font-size(1.25);
 		font-family: $font__main;

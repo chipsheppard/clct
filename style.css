@@ -1088,51 +1088,62 @@ input[type="submit"]:hover {
 }
 
 /* line 64, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/forms/_buttons.scss */
+.btn.dark {
+  background-color: #4a827a;
+}
+
+/* line 67, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/forms/_buttons.scss */
+.btn.dark:hover, .btn.dark:focus, .btn.dark:active {
+  background-color: #ffffff;
+  color: #4a827a;
+}
+
+/* line 73, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/forms/_buttons.scss */
 .btn.brown {
   background-color: #af8466;
   border-color: #ffffff;
 }
 
-/* line 68, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/forms/_buttons.scss */
+/* line 77, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/forms/_buttons.scss */
 .btn.brown:hover, .btn.brown:focus, .btn.brown:active {
   background-color: #ffffff;
   border-color: #af8466;
   color: #af8466;
 }
 
-/* line 74, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/forms/_buttons.scss */
+/* line 83, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/forms/_buttons.scss */
 .btn.blue {
   background-color: #4c759d;
   border-color: #ffffff;
 }
 
-/* line 78, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/forms/_buttons.scss */
+/* line 87, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/forms/_buttons.scss */
 .btn.blue:hover, .btn.blue:focus, .btn.blue:active {
   background-color: #ffffff;
   border-color: #4c759d;
   color: #4c759d;
 }
 
-/* line 85, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/forms/_buttons.scss */
+/* line 94, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/forms/_buttons.scss */
 .btn.wide {
   width: 100%;
   text-align: center;
 }
 
-/* line 91, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/forms/_buttons.scss */
+/* line 100, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/forms/_buttons.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button {
   display: none;
 }
 
-/* line 96, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/forms/_buttons.scss */
+/* line 105, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/forms/_buttons.scss */
 .btn {
   display: inline-block;
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   /* IE10+ CSS styles go here */
-  /* line 102, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/forms/_buttons.scss */
+  /* line 111, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/forms/_buttons.scss */
   button,
   input[type="button"],
   input[type="reset"],
@@ -2863,7 +2874,7 @@ img.alignright,
 
 /* line 156, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/modules/_css-icons.scss */
 .cssicon-plusminus.minus {
-  padding: .438em .5em .375em;
+  padding: .438em .4375em .4375em .5em;
 }
 
 /* line 159, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/modules/_css-icons.scss */
@@ -2887,7 +2898,7 @@ img.alignright,
   top: 5px;
 }
 
-/* line 176, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/modules/_css-icons.scss */
+/* line 177, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/modules/_css-icons.scss */
 .cssicon-arrow-r {
   background-color: #c0c0c0;
   border: 2px solid #86957d;
@@ -2900,7 +2911,7 @@ img.alignright,
   height: 42px;
 }
 
-/* line 188, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/modules/_css-icons.scss */
+/* line 189, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/modules/_css-icons.scss */
 .cssicon-arrow-r:before {
   content: '';
   position: absolute;
@@ -2913,7 +2924,7 @@ img.alignright,
           transform: rotate(-45deg);
 }
 
-/* line 199, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/modules/_css-icons.scss */
+/* line 200, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/modules/_css-icons.scss */
 .cssicon-arrow-r:after {
   content: '';
   position: absolute;
@@ -2924,6 +2935,44 @@ img.alignright,
   background-color: currentColor;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+/* line 212, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/modules/_css-icons.scss */
+.cssicon-arrow-d {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  text-indent: 0;
+  margin-top: 0;
+  margin-left: 0;
+  width: 25px;
+  height: 25px;
+}
+
+/* line 223, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/modules/_css-icons.scss */
+.cssicon-arrow-d:before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  width: 8px;
+  height: 2px;
+  background-color: currentColor;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/* line 234, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/modules/_css-icons.scss */
+.cssicon-arrow-d:after {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 10px;
+  width: 8px;
+  height: 2px;
+  background-color: currentColor;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 /*
@@ -3512,6 +3561,7 @@ img.flex {
 .single .entry-header {
   color: #ffffff;
   margin: 200px 0 0 30px;
+  min-height: 170px;
   width: 68%;
 }
 
@@ -3520,11 +3570,12 @@ img.flex {
   .page .entry-header,
   .single .entry-header {
     margin: 120px 0 0;
+    min-height: 0;
     width: 100%;
   }
 }
 
-/* line 41, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
+/* line 43, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
 .page .entry-header a,
 .single .entry-header a {
   border-bottom: 1px solid currentColor;
@@ -3535,27 +3586,27 @@ img.flex {
   font-size: 0.875rem;
 }
 
-/* line 50, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
+/* line 52, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
 .page .entry-meta,
 .single .entry-meta {
   margin-left: 30px;
 }
 
 @media all and (max-width: 768px) {
-  /* line 50, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
+  /* line 52, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
   .page .entry-meta,
   .single .entry-meta {
     margin-left: 0;
   }
 }
 
-/* line 57, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
+/* line 59, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
 .page .entry-footer,
 .single .entry-footer {
   margin-top: 2em;
 }
 
-/* line 63, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
+/* line 65, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
 .single .entry-title {
   line-height: 1.2;
   margin: 0;
@@ -3564,61 +3615,61 @@ img.flex {
 }
 
 @media all and (max-width: 640px) {
-  /* line 63, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
+  /* line 65, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
   .single .entry-title {
     font-size: 27.008px;
     font-size: 1.688rem;
   }
 }
 
-/* line 74, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
+/* line 76, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
 .single:not(.single-project):not(.single-land) .hentry {
   margin-bottom: 4em;
 }
 
-/* line 80, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
+/* line 82, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
 .entry-content ol,
 .entry-content ul {
   margin-left: 2.5em;
   margin-bottom: 1.5em;
 }
 
-/* line 85, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
+/* line 87, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
 .entry-content ol li,
 .entry-content ul li {
   line-height: 1.4;
   padding-bottom: .5em;
 }
 
-/* line 91, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
+/* line 93, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
 .entry-content ol > li {
   list-style-type: decimal;
 }
 
-/* line 95, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
+/* line 97, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
 .entry-content ul > li {
   list-style-type: disc;
 }
 
-/* line 99, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
+/* line 101, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
 .entry-content ol ol,
 .entry-content ul ul {
   margin-top: .5em;
   margin-bottom: 0;
 }
 
-/* line 104, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
+/* line 106, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
 .entry-content ol ol li:last-child,
 .entry-content ul ul li:last-child {
   padding-bottom: 0;
 }
 
-/* line 109, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
+/* line 111, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
 .entry-content dt {
   font-weight: 700;
 }
 
-/* line 113, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
+/* line 115, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/site/_entries.scss */
 .entry-content dd {
   margin: 0 1em 1em;
 }
@@ -4510,7 +4561,7 @@ img.flex {
   width: 16%;
 }
 
-/* line 86, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+/* line 87, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
 .project-list-wrap .view-text {
   font-family: "Galaxie Polaris", Arial, Helvetica, sans-serif;
   font-weight: 700;
@@ -4519,23 +4570,23 @@ img.flex {
   font-size: 0.875rem;
 }
 
-/* line 92, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+/* line 94, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
 .project-list-wrap .vm {
   display: inline-block;
 }
 
-/* line 97, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+/* line 99, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
 .view-all a:hover .cssicon-arrow-r {
   background-color: #86957d;
 }
 
-/* line 101, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+/* line 103, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
 .project-list {
   display: inline-block;
   width: 80%;
 }
 
-/* line 105, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+/* line 107, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
 .project-list .proj-block {
   float: left;
   margin-right: 3.5%;
@@ -4544,7 +4595,7 @@ img.flex {
 }
 
 @media all and (max-width: 768px) {
-  /* line 105, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+  /* line 107, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
   .project-list .proj-block {
     float: none;
     margin-right: 0;
@@ -4553,17 +4604,17 @@ img.flex {
   }
 }
 
-/* line 118, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+/* line 120, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
 .project-list .proj-block:nth-child(3) {
   margin-right: 0;
 }
 
-/* line 122, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+/* line 124, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
 .project-list .proj-block img {
   display: block;
 }
 
-/* line 127, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+/* line 129, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
 .project-list .proj-block .excerpt {
   border-bottom: 1px solid currentColor;
   margin: 1em 0 1.5em;
@@ -4571,39 +4622,39 @@ img.flex {
   font-size: 0.875rem;
 }
 
-/* line 132, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+/* line 134, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
 .project-list .proj-block .excerpt p {
   margin-bottom: 0;
 }
 
-/* line 138, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+/* line 140, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
 .project-list.extended {
   display: none;
 }
 
-/* line 145, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+/* line 147, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
 .single-project .fi {
   margin: 40px 0 0 100px;
 }
 
 @media all and (max-width: 768px) {
-  /* line 145, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+  /* line 147, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
   .single-project .fi {
     margin: 6% -3% 0;
   }
 }
 
-/* line 152, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+/* line 155, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
 .single-project .featured-image {
   display: block;
 }
 
-/* line 156, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+/* line 159, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
 .single-project .project-list-wrap {
   background-color: #f5f5f3;
 }
 
-/* line 161, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+/* line 164, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
 .projects-footer {
   background-color: #4c759d;
   color: #ffffff;
@@ -4613,7 +4664,7 @@ img.flex {
   font-size: 0.875rem;
 }
 
-/* line 168, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+/* line 171, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
 .projects-footer a {
   border-bottom: 2px solid #60c6b8;
   color: #ffffff;
@@ -4622,17 +4673,17 @@ img.flex {
   padding-top: 1em;
 }
 
-/* line 175, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+/* line 178, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
 .projects-footer a:hover {
   opacity: .75;
 }
 
-/* line 180, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+/* line 183, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
 .projects-footer h3 {
   font-family: "Tiempos Text", Georgia, Times, serif;
 }
 
-/* line 183, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
+/* line 187, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_projects.scss */
 .projects-footer h4 {
   font-size: 20px;
   font-size: 1.25rem;
@@ -4947,6 +4998,361 @@ img.flex {
     font-size: 24px;
     font-size: 1.5rem;
   }
+}
+
+/* line 3, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land .entry-content {
+  padding: 3em 0 1.5em 30px;
+}
+
+@media all and (max-width: 768px) {
+  /* line 3, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+  .land .entry-content {
+    padding: 1.5em 0;
+  }
+}
+
+/* line 10, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land .entry-content .btn {
+  margin-top: 1em;
+}
+
+/* line 15, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land .onpage-link {
+  margin-bottom: 1em;
+  text-align: right;
+}
+
+/* line 19, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land .onpage-link a {
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Galaxie Polaris", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+/* line 26, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land .onpage-link a span {
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 3px;
+  margin-right: 1em;
+}
+
+/* line 31, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land .onpage-link a:hover {
+  opacity: .75;
+}
+
+/* line 37, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land .land-block {
+  margin-bottom: 2em;
+}
+
+/* line 41, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land .land-img-wrap {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 440px;
+}
+
+/* line 67, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.single-land .top-left {
+  margin-top: 30px;
+  padding: 100px 0 0 40px;
+}
+
+@media all and (max-width: 768px) {
+  /* line 67, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+  .single-land .top-left {
+    padding: 0;
+  }
+}
+
+/* line 76, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.single-land .top-left a {
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+  font-family: "Galaxie Polaris", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+/* line 82, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.single-land .top-left a:hover {
+  opacity: .75;
+}
+
+/* line 87, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.single-land .top-left .land-stats div {
+  margin-bottom: 1em;
+}
+
+/* line 90, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.single-land .top-left .land-stats div .sep {
+  color: #60c6b8;
+  padding: 0 .25em;
+}
+
+/* line 94, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.single-land .top-left .land-stats div .num {
+  font-family: "Galaxie Polaris", Arial, Helvetica, sans-serif;
+}
+
+/* line 100, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.single-land .top-right {
+  margin-top: 30px;
+  position: relative;
+  right: -4em;
+}
+
+@media all and (max-width: 768px) {
+  /* line 100, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+  .single-land .top-right {
+    right: 0;
+  }
+}
+
+/* line 111, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land-content {
+  margin-bottom: 3em;
+}
+
+/* line 114, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land-content .land-content-left {
+  padding-right: 6em;
+}
+
+/* line 118, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land-content .land-content-right {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+/* line 121, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land-content .land-content-right p {
+  font-family: "Galaxie Polaris", Arial, Helvetica, sans-serif;
+}
+
+/* line 125, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land-content .land-content-right h3 {
+  border-bottom: 1px solid #dcdcdc;
+  margin-bottom: .5em;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+/* line 131, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land-content .land-content-right h4 {
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-bottom: .25em;
+}
+
+/* line 138, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.properties-map {
+  background-color: #e6ecf1;
+}
+
+/* line 141, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.properties-map img {
+  display: block;
+  width: 100%;
+}
+
+/* line 146, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.properties-map .map-link {
+  text-align: right;
+}
+
+/* line 149, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.properties-map .map-link a {
+  border-bottom: 1px solid #5d9edc;
+  color: #4c759d;
+  display: inline-block;
+  font-family: "Galaxie Polaris", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin: 1em 1em 0 0;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+/* line 158, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.properties-map .map-link a:hover {
+  opacity: .75;
+}
+
+/* line 163, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.properties-map .map-link-caption {
+  color: #8091a1;
+  margin: 1em 0 0 0;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+/* line 170, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.properties {
+  background-color: #e6ecf1;
+  padding: 4em 0;
+}
+
+/* line 174, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.properties h2 {
+  color: #8091a1;
+}
+
+/* line 182, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.property-list .property img {
+  position: relative;
+}
+
+/* line 185, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.property-list .property h3 {
+  font-size: 16px;
+  font-size: 1rem;
+  margin: .5em 0;
+}
+
+/* line 189, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.property-list .property h3 span {
+  border-bottom: 2px solid #60b2ff;
+}
+
+/* line 194, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.property-list .property .property-text {
+  font-family: "Galaxie Polaris", Arial, Helvetica, sans-serif;
+  margin-bottom: 2em;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+/* line 201, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.property-list .property:nth-child(1) {
+  float: left;
+  width: 58%;
+}
+
+/* line 204, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.property-list .property:nth-child(1) img {
+  left: -3vw;
+}
+
+/* line 207, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.property-list .property:nth-child(1) h3,
+.property-list .property:nth-child(1) .property-text {
+  padding: 0 30% 0 0;
+}
+
+/* line 213, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.property-list .property:nth-child(2) {
+  float: right;
+  margin-top: 4em;
+  width: 30%;
+}
+
+/* line 218, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.property-list .property:nth-child(2) h3,
+.property-list .property:nth-child(2) .property-text {
+  padding: 0 10% 0 5%;
+}
+
+@media all and (max-width: 768px) {
+  /* line 229, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+  .property-list .property:nth-child(1),
+  .property-list .property:nth-child(2) {
+    float: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  /* line 236, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+  .property-list .property:nth-child(1) h3, .property-list .property:nth-child(1) .property-text,
+  .property-list .property:nth-child(2) h3,
+  .property-list .property:nth-child(2) .property-text {
+    padding: 0;
+  }
+}
+
+/* line 244, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land-list-wrap {
+  padding: 3em 0;
+}
+
+/* line 247, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land-list-wrap h2 {
+  color: #cac3b7;
+}
+
+/* line 251, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land-list-wrap .view-more {
+  float: right;
+  font-family: "Galaxie Polaris", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  width: 10%;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+/* line 260, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land-list-wrap .view-more .view-text {
+  margin-top: .5em;
+}
+
+/* line 265, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land-list-wrap .land-list {
+  display: inline-block;
+  margin-left: 10%;
+  width: 80%;
+}
+
+/* line 270, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land-list-wrap .land-list .land-block {
+  float: left;
+  margin-right: 3.5%;
+  margin-bottom: 2.5em;
+  width: 31%;
+}
+
+@media all and (max-width: 768px) {
+  /* line 270, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+  .land-list-wrap .land-list .land-block {
+    float: none;
+    margin-right: 0;
+    margin-bottom: 3.5em;
+    width: 100%;
+  }
+}
+
+/* line 283, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land-list-wrap .land-list .land-block:nth-child(3) {
+  margin-right: 0;
+}
+
+/* line 286, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land-list-wrap .land-list .land-block img {
+  display: block;
+}
+
+/* line 291, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land-list-wrap .land-list .land-block .excerpt {
+  border-bottom: 1px solid currentColor;
+  margin: 1em 0 1.5em;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+/* line 296, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land-list-wrap .land-list .land-block .excerpt p {
+  margin-bottom: 0;
+}
+
+/* line 301, Users/normansheppard/Local Sites/concord-land-conservation-trust/app/public/wp-content/themes/clct/scss/custom/_land.scss */
+.land-list-wrap .land-list .land-block .prop-feats {
+  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 /*--------------------------------------------------------------

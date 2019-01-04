@@ -1,0 +1,313 @@
+.land {
+
+	.entry-content {
+		padding: 3em 0 1.5em 30px;
+
+		@include breakpoint(tablet-v) {
+			padding: 1.5em 0;
+		}
+
+		.btn {
+			margin-top: 1em;
+		}
+	}
+
+	.onpage-link {
+		margin-bottom: 1em;
+		text-align: right;
+
+		a {
+			color: #ffffff;
+			display: inline-block;
+			font-family: $font__sans;
+			font-weight: $font__weight-bold;
+			@include font-size(.875);
+
+			span {
+				border-bottom: 1px solid #ffffff;
+				padding-bottom: 3px;
+				margin-right: 1em;
+			}
+			&:hover {
+				opacity: .75;
+			}
+		}
+	}
+	.featured-lands {}
+	.land-block {
+		margin-bottom: 2em;
+	}
+
+	.land-img-wrap {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 440px;
+	}
+	.land-img {
+
+	}
+
+
+	h2 {}
+	.stats {}
+	.prop-feats {}
+	.land-link {}
+	.excerpt {}
+	.lands-map {}
+	h2 {}
+	.land-map {}
+
+	.land-list {}
+}
+
+
+.single-land {
+
+	.top-left {
+
+		margin-top: 30px;
+		padding: 100px 0 0 40px;
+
+		@include breakpoint(tablet-v) {
+			padding: 0;
+		}
+
+		a {
+			border-bottom: 1px solid #ffffff;
+			color: #ffffff;
+			font-family: $font__sans;
+			font-weight: $font__weight-bold;
+
+			&:hover {
+				opacity: .75;
+			}
+		}
+
+		.land-stats div {
+			margin-bottom: 1em;
+
+			.sep {
+				color: $color__green-lt;
+				padding: 0 .25em;
+			}
+			.num {
+				font-family: $font__sans;
+			}
+		}
+	}
+
+	.top-right {
+		margin-top: 30px;
+		position: relative;
+		right: -4em;
+
+		@include breakpoint(tablet-v) {
+			right: 0;
+		}
+	}
+}
+
+.land-content {
+	margin-bottom: 3em;
+
+	.land-content-left {
+		padding-right: 6em;
+	}
+
+	.land-content-right {
+		@include font-size(.875);
+
+		p {
+			font-family: $font__sans;
+		}
+
+		h3 {
+			border-bottom: 1px solid $color__base-xlight;
+			margin-bottom: .5em;
+			@include font-size(.875);
+		}
+
+		h4 {
+			@include font-size(.875);
+			margin-bottom: .25em;
+		}
+	}
+}
+
+.properties-map {
+	background-color: #e6ecf1;
+
+	img {
+		display: block;
+		width: 100%;
+	}
+
+	.map-link {
+		text-align: right;
+
+		a {
+			border-bottom: 1px solid $color__blue-lt;
+			color: $color__blue;
+			display: inline-block;
+			font-family: $font__sans;
+			font-weight: $font__weight-bold;
+			margin: 1em 1em 0 0;
+			@include font-size(.875);
+
+			&:hover {
+				opacity: .75;
+			}
+		}
+	}
+	.map-link-caption {
+		color: #8091a1;
+		margin: 1em 0 0 0;
+		@include font-size(.875);
+	}
+}
+
+.properties {
+	background-color: #e6ecf1;
+	padding: 4em 0;
+
+	h2 {
+		color: #8091a1;
+	}
+}
+
+.property-list {
+
+	.property {
+		img {
+			position: relative;
+		}
+		h3 {
+			@include font-size(1);
+			margin: .5em 0;
+
+			span {
+				border-bottom: 2px solid #60b2ff;
+			}
+		}
+
+		.property-text {
+			font-family: $font__sans;
+			margin-bottom: 2em;
+			@include font-size(.875);
+		}
+	}
+
+	.property:nth-child(1) {
+		float: left;
+		width: 58%;
+		img {
+			left: -3vw;
+		}
+		h3,
+		.property-text {
+			padding: 0 30% 0 0;
+		}
+	}
+
+	.property:nth-child(2) {
+		float: right;
+		margin-top: 4em;
+		width: 30%;
+
+		h3,
+		.property-text {
+			padding: 0 10% 0 5%;
+		}
+	}
+
+	.property:nth-child(3) {
+
+	}
+
+	@include breakpoint(tablet-v) {
+		.property:nth-child(1),
+		.property:nth-child(2) {
+			float: none;
+			padding: 0;
+			margin: 0;
+			width: 100%;
+
+			h3,.property-text {
+				padding: 0;
+			}
+		}
+	}
+}
+
+
+.land-list-wrap {
+	padding: 3em 0;
+
+	h2 {
+		color: $color__beige;
+	}
+
+	.view-more{
+		float: right;
+		font-family: $font__sans;
+		font-weight: $font__weight-bold;
+		line-height: 1;
+		text-align: center;
+		width:10%;
+		@include font-size(.875);
+
+		.view-text {
+			margin-top: .5em;
+		}
+	}
+
+	.land-list {
+		display: inline-block;
+		margin-left: 10%;
+		width: 80%;
+
+		.land-block {
+			float: left;
+			margin-right: 3.5%;
+			margin-bottom: 2.5em;
+			width: 31%;
+
+			@include breakpoint(tablet-v) {
+				float: none;
+				margin-right: 0;
+				margin-bottom: 3.5em;
+				width: 100%;
+			}
+
+			&:nth-child(3) {
+				margin-right: 0;
+			}
+			img {
+				display: block;
+				//width: 100%;
+			}
+
+			.excerpt {
+				border-bottom: 1px solid currentColor;
+				margin: 1em 0 1.5em;
+				@include font-size(.875);
+
+				p {
+					margin-bottom: 0;
+				}
+			}
+
+			.prop-feats {
+				@include font-size(.875);
+			}
+		}
+	}
+}
+
+
+
+
+.land-regulations {
+	h3 {}
+}

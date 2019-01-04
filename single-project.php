@@ -42,6 +42,7 @@ function clct_project() {
 
 	<div class="project-list-wrap">
 		<div class="inner-wrap">
+
 			<div class="view-all">
 				<a href="/projects-events/" class="vm">
 				<div class="cssicon-arrow-r"></div>

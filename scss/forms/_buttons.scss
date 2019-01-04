@@ -61,6 +61,15 @@ input[type="submit"] {
 		}
 	}
 
+	&.dark {
+		background-color: $color__green-drk;
+
+		&:hover, &:focus, &:active {
+			background-color: #ffffff;
+			color: $color__green-drk;
+		}
+	}
+
 	&.brown {
 		background-color: $color__brown-lt;
 		border-color: #ffffff;
