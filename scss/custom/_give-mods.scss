@@ -1,0 +1,44 @@
+.give-modules {
+	margin-top: 6em;
+
+	.givemod-text {
+		margin-bottom: 2.125em;
+
+		h2 {
+			color: $color__brick-lt;
+			@include font-size(2.5625)
+		}
+	}
+
+	.givemod-image {
+		position: relative;
+
+		.givemod-image-image {
+			margin-bottom: 2.125em;
+			margin-left: calc(-50vw + 24%);
+			margin-right: calc(-50vw + 76%);
+			width: auto;
+			max-width: 1000%;
+
+			@include breakpoint(tablet-v) {
+				margin-left: calc(50% - 50vw);
+				margin-right: calc(50% - 50vw);
+			}
+
+			img {
+				width: 100%;
+				max-width: none;
+			}
+		}
+
+		.givemod-image-caption {
+			color: #4a5350;
+			@include font-size(.875)
+
+			span {
+				border-bottom: 1px solid $color__beige;
+				display: inline-block;
+			}
+		}
+	}
+}

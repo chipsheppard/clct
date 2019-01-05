@@ -41,6 +41,10 @@
 
 	.intro {
 		padding: 220px 0 2em 1.5em;
+
+		@include breakpoint(tablet-v) {
+			padding-top: 10em;
+		}
 	}
 
 	.entry-title,
@@ -64,6 +68,15 @@
 .homepage, .trust, .give {
 	.top-block {
 
+		@include breakpoint(tablet-v) {
+			padding-bottom: 0;
+
+			.col-3-7 {
+				position: absolute;
+				z-index: 2;
+			}
+		}
+
 		.inner-wrap {
 			padding-right: 0;
 			padding-bottom: 4em;
@@ -73,12 +86,6 @@
 			}
 		}
 
-		@include breakpoint(tablet-v) {
-			.col-3-7 {
-				position: absolute;
-				z-index: 2;
-			}
-		}
 	}
 }
 
@@ -86,6 +93,10 @@
 	.top-block {
 		h2 {
 			@include font-size(2.8125);
+
+			@include breakpoint(phone-h) {
+				@include font-size(2);
+			}
 		}
 	}
 }

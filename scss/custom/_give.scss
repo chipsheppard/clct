@@ -1,44 +1,116 @@
 .give {
 
 	.callout {
-		width: 75%;
 		background-color: #ffffff;
 		border-bottom: 2px solid $color__blue-lt;
-		padding: 2em;
+		color: $color__blue;
+		padding: 1.5em;
 		margin: -120px auto 0;
-	}
+		width: 75%;
+		@include font-size(1.875);
 
-	.callout_link {}
+		@include breakpoint(tablet-v) {
+			width: 94%;
+			padding: .75em;
+			@include font-size(1.5);
+		}
+
+		.right {
+			text-align: center;
+			position: relative;
+			padding-top: 1.5em;
+
+			a {
+				display: inline-block;
+			}
+		}
+	}
 
 	.onpage-menu {
+		font-family: $font__sans;
+		font-weight: $font__weight-bold;
+		margin-top: 6em;
 
-		.onpage-menu-menu {
+		.onpage-menu-item {
+			margin-bottom: .875em;
+		}
 
-			.onpage-menu-item {}
+		a {
+			color: $color__base;
+			padding-bottom: 3px;
+			border-bottom: 1px solid #bb8072;
 
+			&:hover {
+				opacity: .75;
+			}
 		}
 	}
+
 
 	.message {
+		background-color: $color__green;
+		color: #ffffff;
+		margin-top: 3em;
+		margin-bottom: 24em;
+		padding: 1em 0 3em;
 
-		h2 {}
+		@include breakpoint(tablet-v) {
+			margin-bottom: 64em;
+		}
+		@include breakpoint(phone-v) {
+			margin-bottom: 34em;
+		}
+		@include breakpoint(phone-v) {
+			margin-bottom: 34em;
+		}
 
-		.sub-text {}
+		h2 {
+			padding-top: 1em;
+
+			@include breakpoint(tablet-m) {
+				@include font-size(1.875);
+			}
+		}
+
+		.sub-text {
+			margin-top: 5em;
+			@include font-size(.875);
+
+			@include breakpoint(tablet-m) {
+				margin-top: 2em;
+			}
+		}
+
+		.col-1-2 {
+			position: relative;
+		}
 
 		.message-image {
+			position: absolute;
+			top: 0;
+			right: 0;
+			text-align: right;
 
-			img {}
+			@include breakpoint(tablet-v) {
+				top: 98%;
+				right: 5%;
+
+				img {
+					max-width: 100%;
+					width: 90%;
+				}
+			}
+
+			.message-image-caption {
+				color: #4a5350;
+				padding-right: 2em;
+				@include font-size(.875)
+
+				span {
+					border-bottom: 1px solid $color__beige;
+					display: inline-block;
+				}
+			}
 		}
 	}
-}
-
-.givemod-image {}
-
-.givemod-image-image {}
-
-.givemod-image-caption {}
-
-.givemod-text {
-
-	h2 {}
 }

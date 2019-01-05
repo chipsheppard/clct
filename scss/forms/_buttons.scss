@@ -29,7 +29,7 @@ input[type="submit"] {
 	font-weight: $font__weight-bold;
 	cursor: pointer;
 	line-height: normal;
-	padding: 1em 1em .875em;
+	padding: 1.25em 3em .75em;
 	position: relative;
 	white-space: normal;
 	width: auto;
@@ -88,6 +88,17 @@ input[type="submit"] {
 			background-color: #ffffff;
 			border-color: $color__blue;
 			color: $color__blue;
+		}
+	}
+	&.bluealt {
+		background-color: $color__beige-lt;
+		color: $color__blue-lt;
+		border-color: $color__blue-lt;
+
+		&:hover, &:focus, &:active {
+			background-color: $color__blue;
+			border-color: $color__blue;
+			color: #ffffff;
 		}
 	}
 
