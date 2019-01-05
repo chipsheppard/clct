@@ -81,3 +81,11 @@
 		}
 	}
 }
+
+.trust, .give {
+	.top-block {
+		h2 {
+			@include font-size(2.8125);
+		}
+	}
+}

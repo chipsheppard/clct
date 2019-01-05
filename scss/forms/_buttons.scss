@@ -92,8 +92,12 @@ input[type="submit"] {
 	}
 
 	&.wide {
-		width: 100%;
+		width: 75%;
 		text-align: center;
+
+		@include breakpoint(phone-h) {
+			width: 100%
+		}
 	}
 }
 

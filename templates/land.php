@@ -49,7 +49,6 @@ function clct_land() {
 	</div><!-- /inner-wrap -->
 
 
-
 	<div class="featured-lands">
 		<?php
 		$fl_query = new WP_Query( array(
@@ -73,25 +72,30 @@ function clct_land() {
 					<div class="land-img-wrap" style="background-image: url(<?php echo esc_url( $url ); ?>)"></div>
 				<?php endif; ?>
 
-				<div class="col-1-2 first">
-					<div class="stats"><?php the_excerpt(); ?></div>
-					<h2><a href="<?php the_permalink(); ?>" title="<?php esc_attr( the_title_attribute() ); ?>"><?php the_title(); ?></a></h2>
-					<div class="prop-feats"><?php the_field( 'features' ); ?></div>
+				<div class="inner-wrap">
+					<div class="col-1-2 first">
+						<div class="land-stat">
+							<?php $pcount = count( get_field( 'properties', $fl_query->ID ) ); ?>
+							<span class="num"><?php echo esc_html( $pcount ); ?></span> properties - <span class="num"><?php the_field( 'trails' ); ?></span> trails
+						</div>
+						<h2><a href="<?php the_permalink(); ?>" title="<?php esc_attr( the_title_attribute() ); ?>"><?php the_title(); ?></a></h2>
+						<div class="prop-feats"><?php the_field( 'features' ); ?></div>
+					</div>
+					<div class="col-1-2">
+						<div class="land-link"><a href="<?php the_permalink(); ?>">Discover this land</a></div>
+						<div class="excerpt"><?php the_excerpt(); ?></div>
+						<?php
+						$fl_file = get_field( 'map_pdf' );
+						if ( $fl_file ) :
+							$fl__url = $fl_file['url'];
+							$fl_title = $fl_file['title'];
+							$fl_caption = $fl_file['caption'];
+							?>
+							<a href="<?php echo esc_url( $fl__url ); ?>" title="<?php echo esc_attr( $fl_title ); ?>" class="map-link" target="_blank">Download map</a>
+						<?php endif; ?>
+					</div>
+					<div class="cf"></div>
 				</div>
-				<div class="col-1-2">
-					<div class="land-link"><a href="<?php the_permalink(); ?>">Discover this land</a></div>
-					<div class="excerpt"><?php the_excerpt(); ?></div>
-					<?php
-					$fl_file = get_field( 'link' );
-					if ( $fl_file ) :
-						$fl__url = $fl_file['url'];
-						$fl_title = $fl_file['title'];
-						$fl_caption = $fl_file['caption'];
-						?>
-						<a href="<?php echo esc_url( $fl__url ); ?>" title="<?php echo esc_attr( $fl_title ); ?>" target="_blank">Download map</a>
-					<?php endif; ?>
-				</div>
-				<div class="cf"></div>
 
 				<?php
 				echo '</div>';
@@ -101,8 +105,8 @@ function clct_land() {
 		?>
 		<div class="cf"></div>
 	</div><!-- /featured-lands -->
-
 </div><!-- /top-block -->
+
 
 
 <div class="lands-map">
@@ -115,57 +119,50 @@ function clct_land() {
 	</div>
 </div>
 
+
+
 <a name="landsend"></a>
-<div class="lands-list">
+<div class="land-list-wrap">
 	<div class="inner-wrap">
-		<?php
-		$query = new WP_Query( array(
-			'post_type' => 'land',
-			'posts_per_page' => 30,
-			'orderby' => 'date',
-			'order' => 'DESC',
-		) );
 
-		if ( $query->have_posts() ) {
-			while ( $query->have_posts() ) :
-				$query->the_post();
-				echo '<div class="land-block">';
+		<div class="land-list pullright">
+			<?php
+			$query = new WP_Query( array(
+				'post_type' => 'land',
+				'posts_per_page' => 30,
+				'orderby' => 'date',
+				'order' => 'DESC',
+			) );
 
-				if ( has_post_thumbnail() ) :
-					echo '<div class="land-thumb">';
-					the_post_thumbnail( 'full' );
-					echo '</div>';
-				endif;
-				?>
-				<div class="col-1-2 first">
-					<div class="stats"><?php the_excerpt(); ?></div>
-					<h2><a href="<?php the_permalink(); ?>" title="<?php esc_attr( the_title_attribute() ); ?>"><?php the_title(); ?></a></h2>
+			if ( $query->have_posts() ) {
+				while ( $query->have_posts() ) :
+					$query->the_post();
+					echo '<div class="land-block">';
+
+					if ( has_post_thumbnail() ) :
+						echo '<div class="land-thumb">';
+						the_post_thumbnail( 'medium' );
+						echo '</div>';
+					endif;
+					$pcount = count( get_field( 'properties', $query->ID ) );
+					?>
+					<div class="land-stat">
+						<span class="num"><?php echo esc_html( $pcount ); ?></span> properties - <span class="num"><?php the_field( 'trails' ); ?></span> trails
+					</div>
+					<h4><a href="<?php the_permalink(); ?>" title="<?php esc_attr( the_title_attribute() ); ?>"><?php the_title(); ?></a></h4>
 					<div class="prop-feats"><?php the_field( 'features' ); ?></div>
 				</div>
-				<div class="col-1-2">
-					<div class="land-link"><a href="<?php the_permalink(); ?>">Discover this land</a></h2>
-					<div class="excerpt"><?php the_excerpt(); ?></div>
-					<?php
-					$file = get_field( 'link' );
-					if ( $file ) :
-						$url = $file['url'];
-						$title = $file['title'];
-						$caption = $file['caption'];
-						?>
-						<a href="<?php echo esc_url( $url ); ?>" title="<?php echo esc_attr( $title ); ?>" target="_blank">Download map</a>
-					<?php endif; ?>
-				</div>
-
-			</div>
-			<?php
-			endwhile;
-			wp_reset_postdata();
-		}
-		?>
-		<div class="cf"></div>
+				<?php
+				endwhile;
+				wp_reset_postdata();
+			}
+			?>
+			<div class="cf"></div>
+		</div><!-- /land-list -->
 
 	</div>
 </div>
+<div class="cf"></div>
 
 
 <!-- ACF OPTIONS - land-regulations -->

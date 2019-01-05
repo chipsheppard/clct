@@ -147,8 +147,13 @@
     border-radius: 50%;
 	color: #ffffff;
 	cursor: pointer;
+	font-weight: $font__weight-normal;
     margin: 0;
 	text-indent: 0;
+
+	&:hover {
+		background-color: #d0d5d2;
+	}
 
 	&.plus {
 		padding: .5em .5em .375em;

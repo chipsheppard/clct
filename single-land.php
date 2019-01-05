@@ -24,7 +24,7 @@ function clct_land() {
 	<div class="inner-wrap">
 
 		<header class="entry-header">
-			<div class="return"><a href="/lands/">View all land</a></div>
+			<div class="return"><a href="/clct-lands/">View all land</a></div>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 		</header>
 
@@ -134,9 +134,9 @@ function clct_land() {
 							$p_thumb = $p_image['sizes'][ $p_size ];
 							$p_width = $p_image['sizes'][ $p_size . '-width' ];
 							$p_height = $p_image['sizes'][ $p_size . '-height' ];
-						endif;
-						?>
-						<img src="<?php echo esc_url( $p_url ); ?>" alt="<?php echo esc_attr( $p_alt ); ?>" width="<?php echo esc_attr( $p_width ); ?>" height="<?php echo esc_attr( $p_height ); ?>" />
+							?>
+							<img src="<?php echo esc_url( $p_url ); ?>" alt="<?php echo esc_attr( $p_alt ); ?>" width="<?php echo esc_attr( $p_width ); ?>" height="<?php echo esc_attr( $p_height ); ?>" />
+						<?php endif; ?>
 						<h3><span><?php the_sub_field( 'title' ); ?></span></h3>
 						<div class="property-text"><?php the_sub_field( 'text' ); ?></div>
 					</div>
@@ -146,8 +146,8 @@ function clct_land() {
 			endif;
 			?>
 		</div>
-	</div>
-</div>
+	</div><!-- /inner-wrap -->
+</div><!-- /properties-map -->
 
 <div class="land-list-wrap">
 	<div class="inner-wrap">
@@ -174,7 +174,7 @@ function clct_land() {
 					endif;
 					$pcount = count( get_field( 'properties', $query->ID ) );
 					?>
-					<div class="excerpt">
+					<div class="land-stat">
 						<span class="num"><?php echo esc_html( $pcount ); ?></span> properties - <span class="num"><?php the_field( 'trails' ); ?></span> trails
 					</div>
 					<h4><a href="<?php the_permalink(); ?>" title="<?php esc_attr( the_title_attribute() ); ?>"><?php the_title(); ?></a></h4>
@@ -188,12 +188,48 @@ function clct_land() {
 			<div class="cf"></div>
 		</div><!-- /land-list -->
 
-		<div class="view-more">
-			<a href="/lands/" class="vm">
-				<div class="cssicon-arrow-r"></div>
-				<div class="view-text">View all</div>
-			</a>
+		<div class="view-more-wrap">
+			<div class="view-more">
+				<span class="cssicon-plusminus plus"></span>
+				<div class="view-text">View <span class="m">all</span><span class="l">less</span></div>
+			</div>
 		</div>
+
+		<div class="land-list extended">
+			<?php
+			$equery = new WP_Query( array(
+				'post_type' => 'land',
+				'posts_per_page' => 30,
+				'order' => 'DESC',
+				'orderby' => 'date',
+				'offset'  => 3,
+			) );
+
+			if ( $equery->have_posts() ) {
+				while ( $equery->have_posts() ) :
+					$equery->the_post();
+					echo '<div class="land-block">';
+
+					if ( has_post_thumbnail() ) :
+						echo '<div class="land-thumb">';
+						the_post_thumbnail( 'medium' );
+						echo '</div>';
+					endif;
+					$ecount = count( get_field( 'properties', $query->ID ) );
+					?>
+					<div class="land-stat">
+						<span class="num"><?php echo esc_html( $ecount ); ?></span> properties - <span class="num"><?php the_field( 'trails' ); ?></span> trails
+					</div>
+					<h4><a href="<?php the_permalink(); ?>" title="<?php esc_attr( the_title_attribute() ); ?>"><?php the_title(); ?></a></h4>
+					<div class="prop-feats"><?php the_field( 'features' ); ?></div>
+				</div>
+				<?php
+				endwhile;
+				wp_reset_postdata();
+			}
+			?>
+			<div class="cf"></div>
+		</div><!-- /land-list extended -->
 
 	</div><!-- /inner-wrap -->
 </div><!-- /land-list-wrap -->
