@@ -19,21 +19,19 @@ if ( ! empty( $image ) ) :
 	$thumb = $image['sizes'][ $size ];
 	$width = $image['sizes'][ $size . '-width' ];
 	$height = $image['sizes'][ $size . '-height' ];
-endif;
+	?>
+	<div class="givemod-image">
 
-?>
-<div class="givemod-image">
-
-<?php if ( $image ) : ?>
-	<div class="givemod-image-image">
-		<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
-		<div class="givemod-image-caption">
-			<div class="inner-wrap">
-				<span><?php echo esc_html( $caption ); ?></span>
+	<?php if ( $image ) : ?>
+		<div class="givemod-image-image">
+			<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
+			<div class="givemod-image-caption">
+				<div class="inner-wrap">
+					<span><?php echo esc_html( $caption ); ?></span>
+				</div>
 			</div>
 		</div>
+	<?php endif; ?>
+	<div class="cf"></div>
 	</div>
 <?php endif; ?>
-<div class="cf"></div>
-
-</div>

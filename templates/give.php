@@ -82,12 +82,14 @@ function clct_give() {
 						$caption = $image['caption'];
 						$width = $image['width'];
 						$height = $image['height'];
+						?>
+						 <img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
+						<?php if ( $caption ) : ?>
+							<div class="message-image-caption"><span><?php echo esc_html( $caption ); ?></span></div>
+						<?php
+						endif;
 					endif;
 					?>
-					<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
-					<?php if ( $caption ) : ?>
-						<div class="message-image-caption"><span><?php echo esc_html( $caption ); ?></span></div>
-					<?php endif; ?>
 				</div>
 			</div>
 		</div>

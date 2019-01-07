@@ -137,8 +137,8 @@ x.addListener(myFunction); // Attach listener function on state changes
  */
  jQuery(function( $ ){
 	 $('.l').hide();
-	$( '.cssicon-plusminus' ).click(function() {
-		if ( $(this).hasClass( 'plus' ) ) {
+	 $( '.cssicon-plusminus' ).click(function() {
+		 if ( $(this).hasClass( 'plus' ) ) {
 			$(this).removeClass( 'plus' );
 			$(this).addClass( 'minus' );
 			$('.m').hide();
@@ -152,4 +152,26 @@ x.addListener(myFunction); // Attach listener function on state changes
 			$('.extended').slideUp(200);
 		}
  	} );
+ } );
+
+ /*
+  * Trust columns "Expand to read more"
+  */
+jQuery(function( $ ){
+$('.trust-cols').find('.expand').click(function() {
+	$(this).parents().children('.extra').slideToggle(180);
+  },
+  function() {
+	  $(this).parents().children('.extra').slideToggle(180);
+  } );
+} );
+
+jQuery(function( $ ){
+	$('.expand').click(function() {
+		if ( $(this).hasClass( 'open' ) ) {
+			$(this).removeClass( 'open' );
+		} else {
+			$(this).addClass( 'open' );
+		}
+	} );
  } );

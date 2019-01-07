@@ -81,13 +81,12 @@ input[type="submit"] {
 		}
 	}
 	&.blue {
-		background-color: $color__blue;
-		border-color: #ffffff;
+		background-color: $color__blue-drk;
+		border-color: $color__blue-lt;
 
 		&:hover, &:focus, &:active {
 			background-color: #ffffff;
-			border-color: $color__blue;
-			color: $color__blue;
+			color: $color__blue-drk;
 		}
 	}
 	&.bluealt {
