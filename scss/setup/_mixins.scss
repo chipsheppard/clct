@@ -4,7 +4,6 @@
 	display: table;
 	table-layout: fixed;
 }
-
 @mixin clearfix-after() {
 	clear: both;
 }
@@ -40,4 +39,34 @@
   @if $point == phone-v {
     @media all and (max-width: 380px) { @content; } // 380px and below.
   }
+}
+
+
+@mixin bg1() {
+	background-image:url(assets/images/bg-dust.png);
+	background-repeat: repeat;
+}
+@mixin bg1b() {
+	background-image:url(assets/images/bg-dust2.png);
+	background-repeat: repeat;
+}
+@mixin bg1c() {
+	background-image:url(assets/images/bg-dust3.png);
+	background-repeat: repeat;
+}
+@mixin bg2() {
+	background-image:url(assets/images/bg-topography.png);
+	background-repeat: repeat;
+}
+@mixin bg3() {
+	background-image:url(assets/images/bg-stucco.png);
+	background-repeat: repeat;
+}
+@mixin bg4() {
+	background-image:url(assets/images/bg-feathers.png);
+	background-repeat: repeat;
+}
+@mixin bg5() {
+	background-image:url(assets/images/bg-crossword.png);
+	background-repeat: repeat;
 }

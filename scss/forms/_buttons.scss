@@ -100,6 +100,16 @@ input[type="submit"] {
 			color: #ffffff;
 		}
 	}
+	&.olive {
+		background-color: #889a7f;
+		border-color: #ffffff;
+
+		&:hover, &:focus, &:active {
+			background-color: #ffffff;
+			border-color: $color__olive-lt;
+			color: $color__olive;
+		}
+	}
 
 	&.wide {
 		width: 75%;

@@ -30,12 +30,21 @@ function clct_land() {
 
 		<div class="col-1-4 first top-left">
 			<div class="land-stats">
-				<div>Acquired <span class="sep">/</span> <span class="num"><?php the_field( 'year_acquired' ); ?></span></div>
-				<div>Size <span class="sep">/</span> <span class="num"><?php the_field( 'size' ); ?></span> acres</div>
+
+				<?php
+				if ( have_rows( 'land_stats' ) ) :
+					while ( have_rows( 'land_stats' ) ) :
+						the_row();
+						?>
+						<div><?php the_sub_field( 'subject' ); ?> <span class="sep">/</span> <span class="num"><?php the_sub_field( 'stat' ); ?></span></div>
+						<?php
+					endwhile;
+				endif;
+				?>
 				<?php if ( $count ) : ?>
 					<div>Properties <span class="sep">/</span> <span class="num"><?php echo esc_html( $count ); ?></span></div>
 				<?php endif; ?>
-				<div>Trails <span class="sep">/</span> <span class="num"><?php the_field( 'trails' ); ?></span></div>
+
 			</div>
 		</div>
 		<div class="col-3-4 top-right">

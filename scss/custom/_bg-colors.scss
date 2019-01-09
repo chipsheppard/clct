@@ -43,3 +43,41 @@
 		background-color: $color__brick;
 	}
 }
+
+.homepage {
+	@include bg1b;
+	.site-footer {
+		@include bg1c;
+	}
+	.top-block,
+	.home-bottom {
+		@include bg1;
+	}
+}
+
+.land,
+.single-land {
+	.top-block,
+	.site-footer {
+		@include bg2;
+	}
+}
+.trust {
+	.top-block,
+	.site-footer {
+		@include bg3;
+	}
+}
+.projects,
+.single-project {
+	.top-block,
+	.site-footer {
+		@include bg4;
+	}
+}
+.give {
+	.top-block,
+	.site-footer {
+		@include bg5;
+	}
+}
