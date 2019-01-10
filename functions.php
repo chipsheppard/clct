@@ -36,7 +36,7 @@ require get_template_directory() . '/inc/shortcodes.php';
 function clct_scripts() {
 	wp_enqueue_style( 'clct-style', get_stylesheet_uri(), array(), CLCT_VERSION );
 	wp_enqueue_script( 'clct-headroom', get_template_directory_uri() . '/assets/js/headroom-min.js', array(), CLCT_VERSION, true );
-	wp_enqueue_script( 'clct-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), CLCT_VERSION, true );
+	wp_enqueue_script( 'clct-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix-min.js', array(), CLCT_VERSION, true );
 	wp_enqueue_script( 'clct-globaljs', get_template_directory_uri() . '/assets/js/global-min.js', array( 'jquery' ), CLCT_VERSION, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

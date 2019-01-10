@@ -21,7 +21,7 @@ function clct_project() {
 	<div class="inner-wrap">
 
 		<header class="entry-header">
-			<div class="return"><a href="/projects-events/">View all projects</a></div>
+			<div class="return"><a href="/clct/projects-events/">View all projects</a></div>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 		</header>
 		<?php
@@ -44,7 +44,7 @@ function clct_project() {
 		<div class="inner-wrap">
 
 			<div class="view-all">
-				<a href="/projects-events/" class="vm">
+				<a href="/clct/projects-events/" class="vm">
 				<div class="cssicon-arrow-r"></div>
 				<div class="view-text">View more</div>
 				</a>

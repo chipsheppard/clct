@@ -24,7 +24,7 @@ function clct_land() {
 	<div class="inner-wrap">
 
 		<header class="entry-header">
-			<div class="return"><a href="/clct-lands/">View all land</a></div>
+			<div class="return"><a href="/clct/clct-lands/">View all land</a></div>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 		</header>
 
