@@ -9,9 +9,10 @@
 	letter-spacing: 1px;
 	word-break: break-word;
 
-	@include breakpoint(phone-h) {
-		@include font-size(1.875);
-	}
+	// keep defasult for Projects&Events
+	//@include breakpoint(phone-h) {
+	//	@include font-size(1.875);
+	//}
 
 	div {
 		@include font-size(1);

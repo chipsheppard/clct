@@ -201,6 +201,7 @@
 	.directors {
 		h2 {
 			color: $color__blue;
+			margin-bottom: 1em;
 		}
 	}
 
@@ -223,7 +224,7 @@
 		.portrait {
 			float: left;
 			margin-right: 3.5%;
-			margin-bottom: 2.5em;
+			margin-bottom: 4em;
 			width: 31%;
 			@include font-size(.75);
 

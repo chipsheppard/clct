@@ -64,6 +64,7 @@
 .event-link {
 	text-align: center;
 
+
 	.elink:not(.btn) {
 		border-bottom: 1px solid $color__green;
 		color: $color__green;
@@ -75,6 +76,11 @@
 		&:hover {
 			opacity: .75;
 		}
+	}
+
+	.btn {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 

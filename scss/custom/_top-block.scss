@@ -17,19 +17,6 @@
 		display: block;
 	}
 
-	h2 {
-		margin-bottom: 1em;
-
-		@include breakpoint(tablet-m) {
-			@include font-size(3);
-		}
-
-		@include breakpoint(tablet-h) {
-			@include font-size(2.5);
-		}
-	}
-
-
 	video {
 		display: block;
 		z-index: 1;
@@ -44,6 +31,19 @@
 
 		@include breakpoint(tablet-v) {
 			padding-top: 10em;
+		}
+
+		.intro-text {
+			line-height: 1.25em;
+			margin-bottom: 1em;
+
+			@include breakpoint(tablet-m) {
+				@include font-size(3);
+			}
+
+			@include breakpoint(tablet-h) {
+				@include font-size(2.5);
+			}
 		}
 	}
 
@@ -62,7 +62,6 @@
 			opacity: .75;
 		}
 	}
-
 }
 
 .homepage, .trust, .give {
@@ -85,17 +84,25 @@
 				padding: 0;
 			}
 		}
+	}
+}
+.homepage .top-block .intro {
+	.intro-text {
+		@include font-size(3.875);
 
+		@include breakpoint(phone-h) {
+			@include font-size(2);
+		}
 	}
 }
 
 .trust, .give {
-	.top-block {
-		h2 {
+	.top-block .intro {
+		.intro-text {
 			@include font-size(2.8125);
 
 			@include breakpoint(phone-h) {
-				@include font-size(2);
+				@include font-size(1.6875);
 			}
 		}
 	}

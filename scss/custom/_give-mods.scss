@@ -1,12 +1,21 @@
 .give-modules {
 	margin-top: 6em;
 
+	@include breakpoint(phone-h) {
+		margin-top: 3em;
+	}
+
 	.givemod-text {
 		margin-bottom: 2.125em;
 
 		h2 {
 			color: $color__brick-lt;
 			@include font-size(2.5625)
+
+			@include breakpoint(phone-h) {
+				@include font-size(1.6875);
+			}
+
 		}
 	}
 

@@ -64,19 +64,24 @@
 	left: -40px;
 
 	@include breakpoint(tablet-v) {
-		left: 0;
+		left: auto;
+		right: -3%;
 		text-align: right;
 		margin-bottom: 2em;
+		padding-left: 25%;
 
 		img {
 			display: inline-block;
+			width: 100%;
 		}
 	}
 }
 
 .projmod-content-right {
+	position: relative;
 
 	@include breakpoint(tablet-v) {
+		left: -3%;
 		img {
 			display: inline-block;
 		}
@@ -102,14 +107,27 @@
 	line-height: 1.5;
 	margin-top: 1em;
 	@include font-size(.875);
+
+	@include breakpoint(tablet-v) {
+		margin-top: 0;
+		text-align: left;
+		@include font-size(.75);
+	}
 }
 .projmod-content-left-caption {
 	padding-left: 4em;
 }
 .projmod-content-right-caption {
 	padding-right: 4em;
+	@include breakpoint(tablet-v) {
+		padding-left: 1em;
+	}
 }
-
+.projmod-image-image-caption {
+	@include breakpoint(tablet-v) {
+		padding: .5em .25em 0;
+	}
+}
 
 .projmod-heading {
 

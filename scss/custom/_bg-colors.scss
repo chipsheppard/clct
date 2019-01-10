@@ -58,10 +58,20 @@
 .land,
 .single-land {
 	.top-block,
+	.land-regulations,
 	.site-footer {
 		@include bg2;
 	}
 }
+.single-land {
+	.properties-map,
+	.properties {
+		@include bg2;	
+	}
+
+}
+
+
 .trust {
 	.top-block,
 	.site-footer {

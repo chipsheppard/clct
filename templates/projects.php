@@ -47,7 +47,7 @@ function clct_projects() {
 			</div>
 			<div class="col-1-2 fp-content">
 				<?php the_content(); ?>
-				<a href="<?php the_permalink(); ?>" class="btn">Read more about this project</a>
+				<div class="fp_link"><a href="<?php the_permalink(); ?>" class="btn olive">Read more about this project</a></div>
 			</div>
 			<?php
 			wp_reset_postdata(); // IMPORTANT.

@@ -77,7 +77,7 @@ function clct_land() {
 			<h3>Trail Conditions</h3>
 			<p><?php the_field( 'trial_conditions' ); ?></p>
 			<h3>Entrances <spanclass="sep">/</span> parking</h3>
-			<p><?php the_field( 'entpark' ); ?></p>
+			<?php the_field( 'entpark' ); ?>
 		</div>
 
 	</div>

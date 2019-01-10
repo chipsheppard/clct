@@ -35,7 +35,6 @@ require get_template_directory() . '/inc/shortcodes.php';
  */
 function clct_scripts() {
 	wp_enqueue_style( 'clct-style', get_stylesheet_uri(), array(), CLCT_VERSION );
-	wp_enqueue_style( 'clct-fonts', clct_theme_fonts_url() );
 	wp_enqueue_script( 'clct-headroom', get_template_directory_uri() . '/assets/js/headroom-min.js', array(), CLCT_VERSION, true );
 	wp_enqueue_script( 'clct-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), CLCT_VERSION, true );
 	wp_enqueue_script( 'clct-globaljs', get_template_directory_uri() . '/assets/js/global-min.js', array( 'jquery' ), CLCT_VERSION, true );
@@ -44,20 +43,6 @@ function clct_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'clct_scripts' );
-
-/**
- * Theme Fonts URL
- */
-function clct_theme_fonts_url() {
-	$gfonts = 'Source+Sans+Pro:400,400i,700,700i';
-	$font_families = apply_filters( 'clct_theme_fonts', array( $gfonts ) );
-	$query_args = array(
-		'family' => implode( '|', $font_families ),
-		'subset' => 'latin,latin-ext',
-	);
-	$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	return $fonts_url;
-}
 
 /**
  * Enqueue editor styles for Gutenberg

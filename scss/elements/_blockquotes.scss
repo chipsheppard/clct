@@ -20,6 +20,7 @@ blockquote {
 	@include breakpoint(tablet-v) {
 		padding: 0;
 		margin: 3em 1.5em;
+		@include font-size(1.375);
 	}
 
 	&:before,

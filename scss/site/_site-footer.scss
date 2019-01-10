@@ -14,7 +14,7 @@
 		color: #756c5c;
 
 		&:hover {
-			opacity: .85;;
+			opacity: .85;
 		}
 	}
 }
@@ -52,10 +52,24 @@
 
 		input[type="email"] {
 			width: 60%;
-			margin-right: 1%;
+			margin-right: 2%;
 		}
 		input[type="submit"] {
-			width: 37%;
+			width: 38%;
+		}
+
+		@include breakpoint(tablet-v) {
+			input[type="email"] {
+				width: 60%;
+				margin: 0;
+				display: inline-block;
+			}
+			input[type="submit"] {
+				width: 40%;
+				display: inline-block;
+				margin: 0;
+				border-left: 0;
+			}
 		}
 	}
 
@@ -100,6 +114,7 @@
 
 		@include breakpoint(tablet-v) {
 			text-align: center;
+			padding: 0 2em;
 
 			img {
 				width: auto;

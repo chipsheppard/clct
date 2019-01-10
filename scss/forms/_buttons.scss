@@ -8,8 +8,9 @@ input[type="submit"] {
 	border-width: 0 2px 2px 2px;
 	cursor: pointer;
 	line-height: normal;
-	padding: 1em 1em .875em;
+	padding: 1em 3em .75em;
 	position: relative;
+	text-align: center;
 	white-space: normal;
 	z-index: 1;
 
@@ -17,6 +18,9 @@ input[type="submit"] {
 		color: #ffffff;
 		background-color: #ffffff;
 		color: $color__green;
+	}
+	@include breakpoint(tablet-v) {
+		padding: 1em 1.5em .75em;
 	}
 }
 
@@ -46,7 +50,6 @@ input[type="submit"] {
 	&:focus,
 	&:active {
 		outline: 0;
-		border: 0;
 	}
 
 	&.alt {
@@ -102,11 +105,10 @@ input[type="submit"] {
 	}
 	&.olive {
 		background-color: #889a7f;
-		border-color: #ffffff;
+		border-color: $color__olive-lt;
 
 		&:hover, &:focus, &:active {
 			background-color: #ffffff;
-			border-color: $color__olive-lt;
 			color: $color__olive;
 		}
 	}
@@ -118,6 +120,10 @@ input[type="submit"] {
 		@include breakpoint(phone-h) {
 			width: 100%
 		}
+	}
+
+	@include breakpoint(tablet-v) {
+		padding: 1.25em 1.5em .75em;
 	}
 }
 

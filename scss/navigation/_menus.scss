@@ -40,11 +40,26 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-		opacity: .75;
+		border-bottom: 3px solid currentColor;
+		margin-bottom: .6875em;
 	}
-
-	.menu-item-has-children > a {
-		padding-right: 1em;
+	.single-land & li.land a,
+	li.land a:hover,
+	li.land.current-menu-item a {
+		border-color: $color__green-lt;
+	}
+	li.trust a:hover,
+	li.trust.current-menu-item a {
+		border-color: $color__blue-lt;
+	}
+	.single-project & li.projects a,
+	li.projects a:hover,
+	li.projects.current-menu-item a {
+		border-color: $color__olive-lt;
+	}
+	li.give a:hover,
+	li.give.current-menu-item a {
+		border-color: $color__brick-lt;
 	}
 
 

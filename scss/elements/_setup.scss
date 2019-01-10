@@ -52,6 +52,10 @@ textarea {
 
 p, form, address {
 	margin: 0 0 1.4em;
+
+	@include breakpoint(tablet-v) {
+		margin-bottom: 1em;
+	}
 }
 
 b, strong {

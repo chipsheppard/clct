@@ -16,7 +16,7 @@
 
 	<div class="col-3-7 first">
 		<div class="intro">
-			<h2><?php the_content(); ?></h2>
+			<div class="intro-text"><?php the_content(); ?></div>
 			<?php if ( get_field( 'button_url' ) ) : ?>
 			<a href="<?php the_field( 'button_url' ); ?>" class="btn <?php echo esc_html( $colorclass ); ?>"><?php the_field( 'button_text' ); ?></a>
 			<?php endif; ?>

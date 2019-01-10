@@ -106,7 +106,7 @@ function clct_custom_excerpt_length( $length ) {
 	elseif ( is_search() ) :
 		return 32;
 	else :
-		return 16;
+		return 20;
 	endif;
 }
 add_filter( 'excerpt_length', 'clct_custom_excerpt_length', 999 );
