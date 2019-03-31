@@ -10,8 +10,11 @@
  */
 
 if ( have_rows( 'give_modules' ) ) :
+	$c = 0;
 	while ( have_rows( 'give_modules' ) ) :
 		the_row();
+		$c++;
+		echo '<div id="p' . esc_html( $c ) . '">';
 
 		switch ( get_row_layout() ) {
 
@@ -23,6 +26,6 @@ if ( have_rows( 'give_modules' ) ) :
 				get_template_part( 'template-parts/givemods/givemod-image' );
 				break;
 		}
-
+		echo '</div>';
 	endwhile;
 endif;

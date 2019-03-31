@@ -175,3 +175,105 @@ jQuery(function( $ ){
 		}
 	} );
  } );
+
+
+/*
+ * Sticky On-Page Menu
+ *
+ * @link https://codepen.io/jovanivezic/pen/ZQNdag
+ */
+(function( $ ) {
+	if ($('.opm').length ) {
+
+		var $anchor = $('.opm');
+		var ot = $anchor.offset().top;
+		var move = function() {
+			var st = $(window).scrollTop();
+			//if(window.innerWidth > 640) {
+				if(st >= ot) {
+					$anchor.addClass('stuck');
+				} else {
+					$anchor.removeClass('stuck');
+				}
+			//}
+		};
+
+		$(window).scroll(move);
+		move();
+
+	} else {
+		return;
+	}
+} )( jQuery );
+
+/**
+ * Smooth Scroll for OnPage Menus
+ *
+ * @link http://cssdeck.com/labs/setting-active-states-on-sticky-navigations-while-scrolling
+ * @link https://codepen.io/rishabhp/pen/aNXVbQ
+ */
+(function( $ ) {
+	if ($('.opm').length ) {
+		var sections = $('.opm-target'),
+		nav = $('.opm-menu'),
+		nav_height = nav.outerHeight();
+
+		$(window).on('scroll', function () {
+			var cur_pos = $(this).scrollTop();
+
+			sections.each(function() {
+				var top = $(this).offset().top - nav_height,
+				    bottom = top + $(this).outerHeight();
+
+				if (cur_pos >= top && cur_pos <= bottom) {
+					nav.find('a').removeClass('active');
+					sections.removeClass('active');
+
+					$(this).addClass('active');
+					nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+				}
+		 	});
+		});
+
+		nav.find('a').on('click', function () {
+			var $el = $(this),
+			id = $el.attr('href');
+
+		if ($(id).length ) {
+			$('html, body').animate({
+				scrollTop: $(id).offset().top
+			}, 500);
+		}
+			return false;
+		});
+
+	} else {
+		return;
+	}
+} )( jQuery );
+
+
+(function( $ ) {
+  // Add smooth scrolling to all links
+  $(".scrollto").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+} )( jQuery );

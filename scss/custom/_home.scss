@@ -13,6 +13,7 @@
 		h2 {
 			color: $color__brick;
 			line-height: 1;
+			margin-bottom: .5em;
 			@include font-size(5.3125);
 
 			@include breakpoint(tablet-h) {
@@ -70,23 +71,11 @@
 		@include breakpoint(tablet-v) {
 			padding-left: 0;
 		}
-
-		.message-image-caption {
-			color: #756c5c;
-			font-family: $font__sans;
-		}
-
 	}
 
 	.home-bottom {
 		background-color: $color__olive;
 		margin-top: 6em;
-
-		.message-image-caption {
-			color: #ffffff;
-			font-family: $font__sans;
-			padding: .5em 0 0 2em;
-		}
 	}
 
 	.lower-left,

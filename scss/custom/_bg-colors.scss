@@ -44,14 +44,22 @@
 	}
 }
 
+
+body {
+	@include bg-dust3();
+}
+body.single-land {
+	@include bg-topography();
+}
+
 .homepage {
-	@include bg1b;
+	@include bg-dust2();
 	.site-footer {
-		@include bg1c;
+		@include bg-dust3();
 	}
 	.top-block,
 	.home-bottom {
-		@include bg1;
+		@include bg-dust();
 	}
 }
 
@@ -60,34 +68,39 @@
 	.top-block,
 	.land-regulations,
 	.site-footer {
-		@include bg2;
+		@include bg-topography3();
 	}
 }
 .single-land {
 	.properties-map,
 	.properties {
-		@include bg2;	
+		@include bg-topography2();
 	}
-
 }
 
 
 .trust {
 	.top-block,
 	.site-footer {
-		@include bg3;
+		@include bg-stucco();
 	}
 }
-.projects,
-.single-project {
+body.projects,
+.event-row,
+body.single-project {
+	@include bg-feathers();
 	.top-block,
+	.projects-footer,
 	.site-footer {
-		@include bg4;
+		@include bg-feathers();
 	}
 }
-.give {
+body.give {
+	@include bg-crossword();
 	.top-block,
+	.callout,
+	.message,
 	.site-footer {
-		@include bg5;
+		@include bg-crossword();
 	}
 }

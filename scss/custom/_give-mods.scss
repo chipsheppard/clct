@@ -6,7 +6,7 @@
 	}
 
 	.givemod-text {
-		margin-bottom: 2.125em;
+		margin-bottom: 5em;
 
 		h2 {
 			color: $color__brick-lt;
@@ -15,7 +15,6 @@
 			@include breakpoint(phone-h) {
 				@include font-size(1.6875);
 			}
-
 		}
 	}
 
@@ -23,11 +22,12 @@
 		position: relative;
 
 		.givemod-image-image {
-			margin-bottom: 2.125em;
+			margin-top: 8em;
+			margin-bottom: 6em;
 			margin-left: calc(-50vw + 24%);
 			margin-right: calc(-50vw + 76%);
-			width: auto;
 			max-width: 1000%;
+			width: auto;
 
 			@include breakpoint(tablet-v) {
 				margin-left: calc(50% - 50vw);
@@ -37,16 +37,6 @@
 			img {
 				width: 100%;
 				max-width: none;
-			}
-		}
-
-		.givemod-image-caption {
-			color: #4a5350;
-			@include font-size(.875)
-
-			span {
-				border-bottom: 1px solid $color__beige;
-				display: inline-block;
 			}
 		}
 	}

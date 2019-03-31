@@ -26,6 +26,7 @@ SCROLLED HEADER
 	position:fixed;
 	z-index: 9;
 	background-color: #ffffff;
+	@include bg-dust3();
 }
 
 @include breakpoint(tablet-min-v) {

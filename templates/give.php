@@ -24,6 +24,7 @@ function clct_give() {
 
 	<div class="inner-wrap">
 
+		<?php if ( get_field( 'callout_text' ) ) : ?>
 		<div class="callout">
 			<div class="col-1-2 first left">
 				<?php the_field( 'callout_text' ); ?>
@@ -40,22 +41,27 @@ function clct_give() {
 				<?php endif; ?>
 			</div>
 			<div class="cf"></div>
-		</div><!-- /callout -->
+		</div>
+		<?php endif; ?>
 
-		<div class="col-1-3 first onpage-menu">
+		<div class="col-1-3 first onpage-menu"><div class="opm">
 			<?php
-			if ( have_rows( 'onpage_menu' ) ) :
-				echo '<div class="onpage-menu-menu">';
-				while ( have_rows( 'onpage_menu' ) ) :
+			if ( have_rows( 'give_modules' ) ) :
+				echo '<div class="onpage-menu-menu opm-menu">';
+				$c = 0;
+				while ( have_rows( 'give_modules' ) ) :
 					the_row();
+					$c++;
+					if ( get_sub_field( 'onpage_menu_anchor' ) ) :
 					?>
-					<div class="onpage-menu-item"><a href="#<?php the_sub_field( 'onpage_menu_link' ); ?>"><?php the_sub_field( 'onpage_menu_text' ); ?></a></div>
+						<div class="onpage-menu-item"><a href="#p<?php echo esc_html( $c ); ?>"><?php the_sub_field( 'onpage_menu_anchor' ); ?></a></div>
 					<?php
+					endif;
 				endwhile;
 				echo '</div>';
 			endif;
 			?>
-		</div><!-- /onpage-menu -->
+		</div></div><!-- /onpage-menu -->
 
 		<div class="col-2-3 give-modules">
 			<?php get_template_part( 'template-parts/give', 'modules' ); ?>
@@ -74,18 +80,22 @@ function clct_give() {
 			<div class="col-1-2">
 				<div class="message-image">
 					<?php
-					$image = get_field( 'message_image' );
-					if ( ! empty( $image ) ) :
-						$url = $image['url'];
-						$title = $image['title'];
-						$alt = $image['alt'];
-						$caption = $image['caption'];
-						$width = $image['width'];
-						$height = $image['height'];
+					$m_image = get_field( 'message_image' );
+					$m_link = get_field( 'message_image_caption' );
+					if ( ! empty( $m_image ) ) :
+						$m_url = $m_image['url'];
+						$m_title = $m_image['title'];
+						$m_alt = $m_image['alt'];
+						$m_width = $m_image['width'];
+						$m_height = $m_image['height'];
 						?>
-						 <img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
-						<?php if ( $caption ) : ?>
-							<div class="message-image-caption"><span><?php echo esc_html( $caption ); ?></span></div>
+						 <img src="<?php echo esc_url( $m_url ); ?>" alt="<?php echo esc_attr( $m_alt ); ?>" width="<?php echo esc_attr( $m_width ); ?>" height="<?php echo esc_attr( $m_height ); ?>" />
+						<?php
+						if ( $m_link ) :
+							$m_link_url = $m_link['url'];
+							$m_link_title = $m_link['title'];
+							?>
+							<div class="image-caption"><a href="<?php echo esc_url( $m_link_url ); ?>"><?php echo esc_html( $m_link_title ); ?></a></div>
 						<?php
 						endif;
 					endif;

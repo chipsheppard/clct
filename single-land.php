@@ -85,21 +85,7 @@ function clct_land() {
 
 
 <div class="properties-map">
-	<?php
-	$image = get_field( 'map_image' );
-	if ( ! empty( $image ) ) :
-		$url = $image['url'];
-		$title = $image['title'];
-		$alt = $image['alt'];
-		$caption = $image['caption'];
-		$size = 'large';
-		$thumb = $image['sizes'][ $size ];
-		$width = $image['sizes'][ $size . '-width' ];
-		$height = $image['sizes'][ $size . '-height' ];
-	endif;
-	?>
-	<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
-
+	<?php the_field( 'map_block' ); ?>
 	<div class="inner-wrap">
 		<div class="map-link">
 			<?php
@@ -156,7 +142,8 @@ function clct_land() {
 			?>
 		</div>
 	</div><!-- /inner-wrap -->
-</div><!-- /properties-map -->
+</div><!-- /properties -->
+
 
 <div class="land-list-wrap">
 	<div class="inner-wrap">
@@ -174,7 +161,11 @@ function clct_land() {
 			if ( $query->have_posts() ) {
 				while ( $query->have_posts() ) :
 					$query->the_post();
-					echo '<div class="land-block">';
+					echo '<div class="land-block"><a href="';
+					the_permalink();
+					echo '" alt="';
+					the_title_attribute();
+					echo '">';
 
 					if ( has_post_thumbnail() ) :
 						echo '<div class="land-thumb">';
@@ -186,9 +177,9 @@ function clct_land() {
 					<div class="land-stat">
 						<span class="num"><?php echo esc_html( $pcount ); ?></span> properties - <span class="num"><?php the_field( 'trails' ); ?></span> trails
 					</div>
-					<h4><a href="<?php the_permalink(); ?>" title="<?php esc_attr( the_title_attribute() ); ?>"><?php the_title(); ?></a></h4>
+					<h4><?php the_title(); ?></h4>
 					<div class="prop-feats"><?php the_field( 'features' ); ?></div>
-				</div>
+				</a></div>
 				<?php
 				endwhile;
 				wp_reset_postdata();
@@ -217,7 +208,11 @@ function clct_land() {
 			if ( $equery->have_posts() ) {
 				while ( $equery->have_posts() ) :
 					$equery->the_post();
-					echo '<div class="land-block">';
+					echo '<div class="land-block"><a href="';
+					the_permalink();
+					echo '" alt="';
+					the_title_attribute();
+					echo '">';
 
 					if ( has_post_thumbnail() ) :
 						echo '<div class="land-thumb">';
@@ -229,9 +224,9 @@ function clct_land() {
 					<div class="land-stat">
 						<span class="num"><?php echo esc_html( $ecount ); ?></span> properties - <span class="num"><?php the_field( 'trails' ); ?></span> trails
 					</div>
-					<h4><a href="<?php the_permalink(); ?>" title="<?php esc_attr( the_title_attribute() ); ?>"><?php the_title(); ?></a></h4>
+					<h4><?php the_title(); ?></h4>
 					<div class="prop-feats"><?php the_field( 'features' ); ?></div>
-				</div>
+				</a></div>
 				<?php
 				endwhile;
 				wp_reset_postdata();

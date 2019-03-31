@@ -24,9 +24,30 @@ function clct_home() {
 
 	<div class="inner-wrap">
 
+		<?php if ( get_field( 'callout_text' ) ) : ?>
+		<div class="callout">
+			<div class="col-1-2 first left">
+				<?php the_field( 'callout_text' ); ?>
+			</div>
+			<div class="col-1-2 right">
+				<?php
+				$link = get_field( 'callout_link' );
+				if ( $link ) :
+					$link_url = $link['url'];
+					$link_title = $link['title'];
+					$link_target = $link['target'] ? $link['target'] : '_self';
+					?>
+					<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="btn bluealt wide"><?php echo esc_html( $link_title ); ?></a>
+				<?php endif; ?>
+			</div>
+			<div class="cf"></div>
+		</div>
+		<?php endif; ?>
+
 		<div class="top-left col-1-2 first">
 			<?php
 			$t1_image = get_field( 'top_image' );
+			$t1_link = get_field( 'top_image_caption' );
 			if ( ! empty( $t1_image ) ) :
 				$t1_url = $t1_image['url'];
 				$t1_title = $t1_image['title'];
@@ -36,9 +57,13 @@ function clct_home() {
 				$t1_width = $t1_image['sizes'][ $t1_size . '-width' ];
 				$t1_height = $t1_image['sizes'][ $t1_size . '-height' ];
 				?>
-				 <img src="<?php echo esc_url( $t1_url ); ?>" alt="<?php echo esc_attr( $t1_alt ); ?>" width="<?php echo esc_attr( $t1_width ); ?>" height="<?php echo esc_attr( $t1_height ); ?>" />
-				<?php if ( $t1_caption ) : ?>
-					<div class="message-image-caption"><span><?php echo esc_html( $t1_caption ); ?></span></div>
+				<img src="<?php echo esc_url( $t1_url ); ?>" alt="<?php echo esc_attr( $t1_alt ); ?>" width="<?php echo esc_attr( $t1_width ); ?>" height="<?php echo esc_attr( $t1_height ); ?>" />
+				<?php
+				if ( $t1_link ) :
+					$t1_link_url = $t1_link['url'];
+					$t1_link_title = $t1_link['title'];
+					?>
+					<div class="image-caption"><a href="<?php echo esc_url( $t1_link_url ); ?>"><?php echo esc_html( $t1_link_title ); ?></a></div>
 				<?php
 				endif;
 			endif;
@@ -73,16 +98,12 @@ function clct_home() {
 				$t2_url = $t2_image['url'];
 				$t2_title = $t2_image['title'];
 				$t2_alt = $t2_image['alt'];
-				$t2_caption = $t2_image['caption'];
 				$t2_size = 'medium';
 				$t2_width = $t2_image['sizes'][ $t2_size . '-width' ];
 				$t2_height = $t2_image['sizes'][ $t2_size . '-height' ];
 				?>
 				 <img src="<?php echo esc_url( $t2_url ); ?>" alt="<?php echo esc_attr( $t2_alt ); ?>" width="<?php echo esc_attr( $t2_width ); ?>" height="<?php echo esc_attr( $t2_height ); ?>" />
-				<?php if ( $t2_caption ) : ?>
-					<div class="message-image-caption"><span><?php echo esc_html( $t2_caption ); ?></span></div>
 				<?php
-				endif;
 			endif;
 			?>
 			<div class="mid-left-stat">
@@ -96,18 +117,22 @@ function clct_home() {
 		<div class="mid-right col-2-3">
 			<?php
 			$t3_image = get_field( 'mid_right_image' );
+			$t3_link = get_field( 'mid_right_image_caption' );
 			if ( ! empty( $t3_image ) ) :
 				$t3_url = $t3_image['url'];
 				$t3_title = $t3_image['title'];
 				$t3_alt = $t3_image['alt'];
-				$t3_caption = $t3_image['caption'];
 				$t3_size = 'large';
 				$t3_width = $t3_image['sizes'][ $t3_size . '-width' ];
 				$t3_height = $t3_image['sizes'][ $t3_size . '-height' ];
 				?>
-				 <img src="<?php echo esc_url( $t3_url ); ?>" alt="<?php echo esc_attr( $t3_alt ); ?>" width="<?php echo esc_attr( $t3_width ); ?>" height="<?php echo esc_attr( $t3_height ); ?>" />
-				<?php if ( $t3_caption ) : ?>
-					<div class="message-image-caption"><span><?php echo esc_html( $t3_caption ); ?></span></div>
+				<img src="<?php echo esc_url( $t3_url ); ?>" alt="<?php echo esc_attr( $t3_alt ); ?>" width="<?php echo esc_attr( $t3_width ); ?>" height="<?php echo esc_attr( $t3_height ); ?>" />
+				<?php
+				if ( $t3_link ) :
+					$t3_link_url = $t3_link['url'];
+					$t3_link_title = $t3_link['title'];
+					?>
+					<div class="image-caption"><a href="<?php echo esc_url( $t3_link_url ); ?>"><?php echo esc_html( $t3_link_title ); ?></a></div>
 				<?php
 				endif;
 			endif;
@@ -122,13 +147,17 @@ function clct_home() {
 		<div class="lower-left">
 			<?php
 			$ll_image = get_field( 'lower_left_image' );
+			$ll_link = get_field( 'lower_left_image_caption' );
 			if ( ! empty( $ll_image ) ) :
 				$ll_url = $ll_image['url'];
-				$ll_caption = $ll_image['caption'];
 				?>
 				<div class="ibg" style="background-image:url(<?php echo esc_url( $ll_url ); ?>)"></div>
-				<?php if ( $ll_caption ) : ?>
-					<div class="message-image-caption"><span><?php echo esc_html( $ll_caption ); ?></span></div>
+				<?php
+				if ( $ll_link ) :
+					$ll_link_url = $ll_link['url'];
+					$ll_link_title = $ll_link['title'];
+					?>
+					<div class="image-caption"><a href="<?php echo esc_url( $ll_link_url ); ?>"><?php echo esc_html( $ll_link_title ); ?></a></div>
 				<?php
 				endif;
 			endif;
@@ -138,13 +167,17 @@ function clct_home() {
 		<div class="lower-right">
 			<?php
 			$lr_image = get_field( 'lower_right_image' );
+			$lr_link = get_field( 'lower_right_image_caption' );
 			if ( ! empty( $lr_image ) ) :
 				$lr_url = $lr_image['url'];
-				$lr_caption = $lr_image['caption'];
 				?>
 				<div class="ibg" style="background-image:url(<?php echo esc_url( $lr_url ); ?>)"></div>
-				<?php if ( $lr_caption ) : ?>
-					<div class="message-image-caption"><span><?php echo esc_html( $lr_caption ); ?></span></div>
+				<?php
+				if ( $lr_link ) :
+					$lr_link_url = $lr_link['url'];
+					$lr_link_title = $lr_link['title'];
+					?>
+					<div class="image-caption"><a href="<?php echo esc_url( $lr_link_url ); ?>"><?php echo esc_html( $lr_link_title ); ?></a></div>
 				<?php
 				endif;
 			endif;
@@ -176,18 +209,22 @@ function clct_home() {
 			<div class="bottom-right col-1-2">
 				<?php
 				$b_image = get_field( 'bottom_image' );
+				$br_link = get_field( 'bottom_image_caption' );
 				if ( ! empty( $b_image ) ) :
 					$b_url = $b_image['url'];
 					$b_title = $b_image['title'];
 					$b_alt = $b_image['alt'];
-					$b_caption = $b_image['caption'];
 					$b_size = 'large';
 					$b_width = $b_image['sizes'][ $b_size . '-width' ];
 					$b_height = $b_image['sizes'][ $b_size . '-height' ];
 					?>
 					 <img src="<?php echo esc_url( $b_url ); ?>" alt="<?php echo esc_attr( $b_alt ); ?>" width="<?php echo esc_attr( $b_width ); ?>" height="<?php echo esc_attr( $b_height ); ?>" />
-					<?php if ( $b_caption ) : ?>
-						<div class="message-image-caption"><span><?php echo esc_html( $b_caption ); ?></span></div>
+					<?php
+					if ( $br_link ) :
+						$br_link_url = $br_link['url'];
+						$br_link_title = $br_link['title'];
+						?>
+						<div class="image-caption"><a href="<?php echo esc_url( $br_link_url ); ?>"><?php echo esc_html( $br_link_title ); ?></a></div>
 					<?php
 					endif;
 				endif;

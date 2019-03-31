@@ -14,6 +14,43 @@
 	font-size: $sizeValue * 1rem;
 }
 
+@mixin bg-dust() {
+	background-image: url(assets/images/bg-dust.png);
+    background-repeat: repeat;
+}
+@mixin bg-dust2() {
+	background-image: url(assets/images/bg-dust2.png);
+    background-repeat: repeat;
+}
+@mixin bg-dust3() {
+	background-image: url(assets/images/bg-dust3.png);
+    background-repeat: repeat;
+}
+@mixin bg-topography() {
+	background-image: url(assets/images/bg-topography.png);
+    background-repeat: repeat;
+}
+@mixin bg-topography2() {
+	background-image: url(assets/images/bg-topography2.png);
+    background-repeat: repeat;
+}
+@mixin bg-topography3() {
+	background-image: url(assets/images/bg-topography3.png);
+    background-repeat: repeat;
+}
+@mixin bg-stucco() {
+	background-image: url(assets/images/bg-stucco.png);
+    background-repeat: repeat;
+}
+@mixin bg-feathers() {
+	background-image: url(assets/images/bg-feathers.png);
+    background-repeat: repeat;
+}
+@mixin bg-crossword() {
+	background-image: url(assets/images/bg-crossword.png);
+    background-repeat: repeat;
+}
+
 // Media Queries
 // http://gs.statcounter.com/screen-resolution-stats
 @mixin breakpoint($point) {
@@ -39,34 +76,4 @@
   @if $point == phone-v {
     @media all and (max-width: 380px) { @content; } // 380px and below.
   }
-}
-
-
-@mixin bg1() {
-	background-image:url(assets/images/bg-dust.png);
-	background-repeat: repeat;
-}
-@mixin bg1b() {
-	background-image:url(assets/images/bg-dust2.png);
-	background-repeat: repeat;
-}
-@mixin bg1c() {
-	background-image:url(assets/images/bg-dust3.png);
-	background-repeat: repeat;
-}
-@mixin bg2() {
-	background-image:url(assets/images/bg-topography.png);
-	background-repeat: repeat;
-}
-@mixin bg3() {
-	background-image:url(assets/images/bg-stucco.png);
-	background-repeat: repeat;
-}
-@mixin bg4() {
-	background-image:url(assets/images/bg-feathers.png);
-	background-repeat: repeat;
-}
-@mixin bg5() {
-	background-image:url(assets/images/bg-crossword.png);
-	background-repeat: repeat;
 }

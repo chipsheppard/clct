@@ -1,57 +1,5 @@
 .give {
-
-	.callout {
-		background-color: #ffffff;
-		border-bottom: 2px solid $color__blue-lt;
-		color: $color__blue;
-		padding: 1.5em;
-		margin: -120px auto 0;
-		width: 75%;
-		@include font-size(1.875);
-
-		@include breakpoint(tablet-v) {
-			line-height: 1.2em;
-			padding: .75em;
-			width: 94%;
-			@include font-size(1.5);
-		}
-
-		.right {
-			text-align: center;
-			position: relative;
-			padding-top: 1.5em;
-
-			a {
-				display: inline-block;
-			}
-		}
-	}
-
-	.onpage-menu {
-		font-family: $font__sans;
-		font-weight: $font__weight-bold;
-		margin-top: 6em;
-
-		@include breakpoint(phone-h) {
-			display: none;
-		}
-
-		.onpage-menu-item {
-			margin-bottom: .875em;
-		}
-
-		a {
-			color: $color__base;
-			padding-bottom: 3px;
-			border-bottom: 1px solid #bb8072;
-
-			&:hover {
-				opacity: .75;
-			}
-		}
-	}
-
-
+	
 	.message {
 		background-color: $color__green;
 		color: #ffffff;
@@ -103,17 +51,6 @@
 				img {
 					max-width: 100%;
 					width: 97%;
-				}
-			}
-
-			.message-image-caption {
-				color: #4a5350;
-				padding-right: 2em;
-				@include font-size(.875)
-
-				span {
-					border-bottom: 1px solid $color__beige;
-					display: inline-block;
 				}
 			}
 		}

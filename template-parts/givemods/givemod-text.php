@@ -10,8 +10,7 @@
  */
 
 ?>
-<a name="<?php the_sub_field( 'onpage_menu_anchor' ); ?>"></a>
-<div class="col-3-4 silo givemod-text">
+<div class="col-3-4 silo givemod-text opm-target">
 	<h2><?php the_sub_field( 'givemod_text_title' ); ?></h2>
 	<?php the_sub_field( 'givemod_text_text' ); ?>
 </div>

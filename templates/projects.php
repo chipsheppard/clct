@@ -31,28 +31,24 @@ function clct_projects() {
 	</div>
 	<div class="col-3-4 featured-project">
 		<?php
+		// POST OBJECT.
 		$featured_project = get_field( 'featured_project' );
-
-		if ( $featured_project ) :
-			// override $post.
-			global $post;
-			$post = $featured_project;
-			setup_postdata( $post );
-			?>
-
-			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
-
-			<div class="col-1-2 first fp-title">
-				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-			</div>
-			<div class="col-1-2 fp-content">
-				<?php the_content(); ?>
-				<div class="fp_link"><a href="<?php the_permalink(); ?>" class="btn olive">Read more about this project</a></div>
-			</div>
-			<?php
-			wp_reset_postdata(); // IMPORTANT.
-		endif;
+		$content = get_post_field( 'post_content', $featured_project->ID );
 		?>
+
+		<a href="<?php echo esc_url( get_permalink( $featured_project->ID ) ); ?>">
+			<?php echo get_the_post_thumbnail( $featured_project->ID, 'large' ); ?>
+		</a>
+
+		<div class="col-1-2 first fp-title">
+			<h3><a href="<?php echo esc_url( get_permalink( $featured_project->ID ) ); ?>"><?php echo get_the_title( $featured_project->ID ); ?></a></h3>
+		</div>
+
+		<div class="col-1-2 fp-content">
+			<?php echo wp_kses_post( $content ); ?>
+			<div class="fp_link"><a href="<?php echo esc_url( get_permalink( $featured_project->ID ) ); ?>" class="btn olive">Read more about this project</a></div>
+		</div>
+
 	</div><!-- /featured project -->
 	<div class="cf"></div>
 
@@ -74,7 +70,11 @@ function clct_projects() {
 			if ( $query->have_posts() ) {
 				while ( $query->have_posts() ) :
 					$query->the_post();
-					echo '<div class="proj-block">';
+					echo '<div class="proj-block"><a href="';
+					the_permalink();
+					echo '" alt="';
+					the_title_attribute();
+					echo '">';
 
 					if ( has_post_thumbnail() ) :
 						echo '<div class="proj-thumb">';
@@ -84,8 +84,8 @@ function clct_projects() {
 
 					?>
 					<div class="excerpt"><?php the_excerpt(); ?></div>
-					<h4><a href="<?php the_permalink(); ?>" title="<?php esc_attr( the_title_attribute() ); ?>"><?php the_title(); ?></a></h4>
-				</div>
+					<h4><?php the_title(); ?></h4>
+				</a></div>
 				<?php
 				endwhile;
 				wp_reset_postdata();
@@ -108,7 +108,11 @@ function clct_projects() {
 			if ( $equery->have_posts() ) {
 				while ( $equery->have_posts() ) :
 					$equery->the_post();
-					echo '<div class="proj-block">';
+					echo '<div class="proj-block"><a href="';
+					the_permalink();
+					echo '" alt="';
+					the_title_attribute();
+					echo '">';
 
 					if ( has_post_thumbnail() ) :
 						echo '<div class="proj-thumb">';
@@ -118,8 +122,8 @@ function clct_projects() {
 
 					?>
 					<div class="excerpt"><?php the_excerpt(); ?></div>
-					<h4><a href="<?php the_permalink(); ?>" title="<?php esc_attr( the_title_attribute() ); ?>"><?php the_title(); ?></a></h4>
-				</div>
+					<h4><?php the_title(); ?></h4>
+				</a></div>
 				<?php
 				endwhile;
 				wp_reset_postdata();

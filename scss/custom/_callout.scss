@@ -1,0 +1,29 @@
+.callout {
+	background-color: #ffffff;
+	border-bottom: 2px solid $color__blue-lt;
+	color: $color__blue;
+	padding: 1.5em;
+	margin: -120px auto 0;
+	width: 75%;
+	@include font-size(1.875);
+
+	@include breakpoint(tablet-v) {
+		line-height: 1.2em;
+		padding: .75em;
+		width: 94%;
+		@include font-size(1.5);
+	}
+
+	.right {
+		text-align: center;
+		position: relative;
+		padding-top: 1.5em;
+
+		a {
+			display: inline-block;
+		}
+	}
+}
+.homepage .callout {
+	margin-bottom: 2em;
+}

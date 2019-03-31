@@ -1,25 +1,5 @@
 .trust {
 
-// ON PAGE MENU
-	.onpage-menu {
-		font-family: $font__sans;
-		font-weight: $font__weight-bold;
-
-		.onpage-menu-item {
-			margin-bottom: .875em;
-		}
-
-		a {
-			color: $color__blue;
-			padding-bottom: 3px;
-			border-bottom: 1px solid $color__blue-lt;
-
-			&:hover {
-				opacity: .75;
-			}
-		}
-	}
-
 	h2 {
 		@include font-size(4.185);
 
@@ -47,16 +27,6 @@
 			img {
 				width: 100%;
 				max-width: none;
-			}
-		}
-
-		.trust-image-caption {
-			color: #4a5350;
-			@include font-size(.875)
-
-			span {
-				border-bottom: 1px solid $color__beige;
-				display: inline-block;
 			}
 		}
 	}
@@ -182,21 +152,14 @@
 					width: 95%;
 				}
 			}
-
-			.message-image-caption {
-				color: #4a5350;
-				padding-right: 2em;
-				@include font-size(.875)
-
-				span {
-					border-bottom: 1px solid $color__beige;
-					display: inline-block;
-				}
-			}
 		}
 	}
 
 // TRUSTEES & DIRECTORS
+	.directors {
+		margin-bottom: 5em;
+	}
+
 	.trustees,
 	.directors {
 		h2 {
@@ -208,7 +171,6 @@
 	.section-title {
 		border-bottom: 1px solid $color__olive;
 		display: inline;
-		padding-right: 4em;
 	}
 
 	.team-list {

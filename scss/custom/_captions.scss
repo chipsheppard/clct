@@ -1,0 +1,38 @@
+.image-caption {
+	color: #4a5350;
+	@include font-size(.875);
+
+	a {
+		border-bottom: 1px solid $color__beige;
+		display: inline-block;
+		color: #4a5350;
+
+		&:hover {
+			color: #000;
+		}
+	}
+
+	span {
+		font-family: $font__main;
+	}
+
+	.pad-r {
+		padding-right: 2em;
+	}
+
+	.pad-l {
+		padding-left: 2em;
+	}
+}
+
+.home-bottom .image-caption {
+	padding: .5em 0 0 2em;
+
+	a {
+		color: #ffffff;
+
+		&:hover {
+			color: #000;
+		}
+	}
+}

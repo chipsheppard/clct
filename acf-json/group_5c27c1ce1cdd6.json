@@ -3,6 +3,22 @@
     "title": "Land",
     "fields": [
         {
+            "key": "field_5c9fb0b6b981f",
+            "label": "Stats",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_5c33bc14c2e3e",
             "label": "Land Stats",
             "name": "land_stats",
@@ -62,6 +78,22 @@
             ]
         },
         {
+            "key": "field_5c9fb0c1b9820",
+            "label": "Features\/Conditions",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_5c27c2ad10f82",
             "label": "Features",
             "name": "features",
@@ -119,10 +151,10 @@
             "delay": 0
         },
         {
-            "key": "field_5c2d3ade7e17f",
-            "label": "Map Image",
-            "name": "map_image",
-            "type": "image",
+            "key": "field_5c9fb0ccb9821",
+            "label": "Map",
+            "name": "",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -131,16 +163,27 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5c2d3ade7e17f",
+            "label": "Map block",
+            "name": "map_block",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_5c27c55077e55",
@@ -160,6 +203,22 @@
             "min_size": "",
             "max_size": "",
             "mime_types": "pdf"
+        },
+        {
+            "key": "field_5c9fb0dab9822",
+            "label": "Properties List",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_5c2d125ea9429",
@@ -300,5 +359,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1547157496
+    "modified": 1553970807
 }

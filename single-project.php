@@ -44,10 +44,12 @@ function clct_project() {
 		<div class="inner-wrap">
 
 			<div class="view-all">
-				<a href="<?php echo esc_url( home_url( '/projects-events' ) ); ?>" class="vm">
+				<!--a href="<?php echo esc_url( home_url( '/projects-events' ) ); ?>" class="vm">
 				<div class="cssicon-arrow-r"></div>
 				<div class="view-text">View more</div>
-				</a>
+			</a-->
+				<span class="cssicon-plusminus plus"></span>
+				<div class="view-text">View <span class="m">all</span><span class="l">less</span></div>
 			</div>
 			<div class="project-list">
 				<?php
@@ -61,7 +63,11 @@ function clct_project() {
 				if ( $query->have_posts() ) {
 					while ( $query->have_posts() ) :
 						$query->the_post();
-						echo '<div class="proj-block">';
+						echo '<div class="proj-block"><a href="';
+						the_permalink();
+						echo '" alt="';
+						the_title_attribute();
+						echo '">';
 
 						if ( has_post_thumbnail() ) :
 							echo '<div class="proj-thumb">';
@@ -71,8 +77,8 @@ function clct_project() {
 
 						?>
 						<div class="excerpt"><?php the_excerpt(); ?></div>
-						<h4><a href="<?php the_permalink(); ?>" title="<?php esc_attr( the_title_attribute() ); ?>"><?php the_title(); ?></a></h4>
-					</div>
+						<h4><?php the_title(); ?></h4>
+					</a></div>
 					<?php
 					endwhile;
 					wp_reset_postdata();
@@ -80,6 +86,43 @@ function clct_project() {
 				?>
 				<div class="cf"></div>
 			</div><!-- /projects-list -->
+
+			<div class="project-list extended">
+				<?php
+				$equery = new WP_Query( array(
+					'post_type' => 'project',
+					'posts_per_page' => 30,
+					'order' => 'DESC',
+					'orderby' => 'date',
+					'offset'  => 3,
+				) );
+
+				if ( $equery->have_posts() ) {
+					while ( $equery->have_posts() ) :
+						$equery->the_post();
+						echo '<div class="proj-block"><a href="';
+						the_permalink();
+						echo '" alt="';
+						the_title_attribute();
+						echo '">';
+
+						if ( has_post_thumbnail() ) :
+							echo '<div class="proj-thumb">';
+							the_post_thumbnail( 'medium' );
+							echo '</div>';
+						endif;
+
+						?>
+						<div class="excerpt"><?php the_excerpt(); ?></div>
+						<h4><?php the_title(); ?></h4>
+					</a></div>
+					<?php
+					endwhile;
+					wp_reset_postdata();
+				}
+				?>
+				<div class="cf"></div>
+			</div><!-- /projects extended -->
 
 		</div><!-- /inner-wrap -->
 	</div><!-- /project-list-wrap -->

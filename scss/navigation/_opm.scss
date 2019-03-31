@@ -1,0 +1,44 @@
+.opm {
+	position: relative;
+    padding: 1em;
+}
+.opm.stuck {
+	//float:none;
+	//left: 3%;
+	background-color: #ffffff;
+	position: fixed;
+	top: 0;
+	z-index: 6;
+	@include bg-dust2()
+}
+.onpage-menu {
+	font-family: $font__sans;
+	font-weight: $font__weight-bold;
+	margin-top: 7em;
+
+	.onpage-menu-item {
+		margin-bottom: .875em;
+	}
+
+	a {
+		color: $color__blue;
+		padding-bottom: 3px;
+		border-bottom: 1px solid $color__blue-lt;
+
+		&:hover {
+			opacity: .75;
+		}
+	}
+}
+
+.give .onpage-menu {
+
+	@include breakpoint(phone-h) {
+		display: none;
+	}
+
+	a {
+		color: $color__base;
+		border-bottom: 1px solid #bb8072;
+	}
+}

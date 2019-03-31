@@ -3,6 +3,22 @@
     "title": "Homepage",
     "fields": [
         {
+            "key": "field_5c9ec94b3d8fc",
+            "label": "Top Section",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_5c34add49b9ae",
             "label": "Top Image",
             "name": "top_image",
@@ -25,6 +41,21 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5c9ec9133d8fb",
+            "label": "Top Image Caption",
+            "name": "top_image_caption",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         },
         {
             "key": "field_5c3512c49b9af",
@@ -78,6 +109,72 @@
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_5c9f8365c8ae0",
+            "label": "CallOut",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5c9f8384c8ae1",
+            "label": "Callout Text",
+            "name": "callout_text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_5c9f83a0c8ae2",
+            "label": "Callout Link",
+            "name": "callout_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_5c9ec9ad3d8fd",
+            "label": "Mid Section",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_5c35138d9b9b2",
@@ -166,6 +263,37 @@
             "mime_types": ""
         },
         {
+            "key": "field_5c9ec9c93d8fe",
+            "label": "Mid Right Image Caption",
+            "name": "mid_right_image_caption",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_5c9eca8a3d8ff",
+            "label": "Lower Mid Section",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_5c3516959b9b6",
             "label": "Lower Left Image",
             "name": "lower_left_image",
@@ -190,6 +318,21 @@
             "mime_types": ""
         },
         {
+            "key": "field_5c9ecaa73d900",
+            "label": "Lower Left Image Caption",
+            "name": "lower_left_image_caption",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_5c3516a49b9b7",
             "label": "Lower Right Image",
             "name": "lower_right_image",
@@ -212,6 +355,37 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5c9ecabd3d901",
+            "label": "Lower Right Image Caption",
+            "name": "lower_right_image_caption",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_5c9ecb363d902",
+            "label": "Bottom Section",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_5c3516c59b9b8",
@@ -289,6 +463,21 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5c9ecb543d903",
+            "label": "Bottom Image Caption",
+            "name": "bottom_image_caption",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -308,5 +497,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1546994336
+    "modified": 1553957850
 }

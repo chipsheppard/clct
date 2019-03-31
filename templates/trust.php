@@ -25,22 +25,22 @@ function clct_trust() {
 	<div class="trust-top">
 		<div class="inner-wrap">
 
-			<div class="col-1-3 first onpage-menu">
+			<div class="col-1-3 first onpage-menu"><div class="opm">
 				<?php
 				if ( have_rows( 'onpage_menu' ) ) :
-					echo '<div class="onpage-menu-menu">';
+					echo '<div class="onpage-menu-menu opm-menu">';
 					$c = 0;
 					while ( have_rows( 'onpage_menu' ) ) :
 						the_row();
 						$c++
 						?>
-						<div class="onpage-menu-item"><a href="#<?php echo 't' . esc_html( $c ); ?>"><?php the_sub_field( 'menu_text' ); ?></a></div>
+						<div class="onpage-menu-item"><a href="#p<?php echo esc_html( $c ); ?>"><?php the_sub_field( 'menu_text' ); ?></a></div>
 						<?php
 					endwhile;
 					echo '</div>';
 				endif;
 				?>
-			</div><!-- /onpage-menu -->
+			</div></div><!-- /onpage-menu -->
 
 			<div class="col-1-3 left">
 				<?php the_field( 'top_left' ); ?>
@@ -48,6 +48,7 @@ function clct_trust() {
 			<div class="col-1-3 right">
 				<?php the_field( 'top_right' ); ?>
 			</div>
+			<div class="cf"></div>
 
 		</div><!-- /inner-wrap -->
 	</div><!-- /trust-top -->
@@ -64,24 +65,27 @@ function clct_trust() {
 		$fw_height = $fw_image['height'];
 	?>
 	<div class="trust-image">
-		<?php if ( $fw_image ) : ?>
 		<div class="trust-image-image">
 			<img src="<?php echo esc_url( $fw_url ); ?>" alt="<?php echo esc_attr( $fw_alt ); ?>" width="<?php echo esc_attr( $fw_width ); ?>" height="<?php echo esc_attr( $fw_height ); ?>" />
-			<?php if ( $fw_caption ) : ?>
-			<div class="trust-image-caption">
+			<?php
+			$t_link = get_field( 'trust_image_caption' );
+			if ( $t_link ) :
+				$t_url = $t_link['url'];
+				$t_title = $t_link['title'];
+			?>
+			<div class="image-caption">
 				<div class="inner-wrap">
-					<span><?php echo esc_html( $fw_caption ); ?></span>
+					<a href="<?php echo esc_url( $t_url ); ?>"><?php echo esc_html( $t_title ); ?></a>
 				</div>
 			</div>
 			<?php endif; ?>
 		</div>
-		<?php endif; ?>
 		<div class="cf"></div>
 	</div><!-- /trust-image -->
 	<?php endif; ?>
 
 
-	<a name="t1"></a>
+<div id="p1"></div>
 	<div class="trust-mid">
 		<div class="inner-wrap">
 
@@ -149,8 +153,15 @@ function clct_trust() {
 						$height = $image['height'];
 						?>
 						<img src="<?php echo esc_url( $url ); ?>" alt="<?php echo esc_attr( $alt ); ?>" width="<?php echo esc_attr( $width ); ?>" height="<?php echo esc_attr( $height ); ?>" />
-						<?php if ( $caption ) : ?>
-							<div class="col-image-caption"><span><?php echo esc_html( $caption ); ?></span></div>
+						<?php
+						$l_link = get_field( 'col_image_caption' );
+						if ( $l_link ) :
+							$l_url = $l_link['url'];
+							$l_title = $l_link['title'];
+							?>
+							<div class="image-caption">
+								<a href="<?php echo esc_url( $l_url ); ?>"><?php echo esc_html( $l_title ); ?></a>
+							</div>
 						<?php
 						endif;
 					endif;
@@ -159,7 +170,9 @@ function clct_trust() {
 				<div class="cf"></div>
 			</div><!-- /trust-cols -->
 
-			<a name="t2"></a>
+
+
+<div id="p2"></div>
 			<h2><?php the_field( 'mid_header_two' ); ?></h2>
 
 			<div class="trust-cols">
@@ -222,8 +235,15 @@ function clct_trust() {
 						$m_height = $m_image['height'];
 						?>
 						<img src="<?php echo esc_url( $m_url ); ?>" alt="<?php echo esc_attr( $m_alt ); ?>" width="<?php echo esc_attr( $m_width ); ?>" height="<?php echo esc_attr( $m_height ); ?>" />
-						<?php if ( $m_caption ) : ?>
-							<div class="message-image-caption"><span><?php echo esc_html( $m_caption ); ?></span></div>
+						<?php
+						$ml_link = get_field( 'message_image_caption' );
+						if ( $ml_link ) :
+							$ml_url = $ml_link['url'];
+							$ml_title = $ml_link['title'];
+							?>
+							<div class="image-caption pad-l">
+								<a href="<?php echo esc_url( $ml_url ); ?>"><?php echo esc_html( $ml_title ); ?></a>
+							</div>
 						<?php
 						endif;
 					endif;
@@ -239,7 +259,7 @@ function clct_trust() {
 
 
 
-	<a name="t3"></a>
+<div id="p3"></div>
 	<div class="trustees inner-wrap">
 		<div class="section-title"><?php the_field( 'trustee_section_header' ); ?></div>
 		<h2><?php the_field( 'trustee_section_title' ); ?></h2>

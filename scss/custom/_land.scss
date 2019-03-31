@@ -109,6 +109,12 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		height: 440px;
+
+		a {
+			display: inline-block;
+			height: 100%;
+			width: 100%;
+		}
 	}
 
 	.lands-map {
@@ -216,9 +222,8 @@
 .properties-map {
 	background-color: #e6ecf1;
 
-	img {
-		display: block;
-		width: 100%;
+	p:first-of-type {
+		margin-bottom: 0;
 	}
 
 	.map-link {
@@ -230,7 +235,7 @@
 			display: inline-block;
 			font-family: $font__sans;
 			font-weight: $font__weight-bold;
-			margin: 1em 1em 0 0;
+			margin: 0 1em 0 0;
 			@include font-size(.875);
 
 			&:hover {
@@ -247,7 +252,7 @@
 
 .properties {
 	background-color: #e6ecf1;
-	padding: 4em 0;
+	padding: 4em 0 8em;
 
 	h2 {
 		color: #8091a1;
@@ -385,7 +390,7 @@
 
 
 .land-list-wrap {
-	padding: 3em 0;
+	padding: 6em 0;
 
 	h2 {
 		color: $color__beige;
@@ -486,17 +491,22 @@
 
 		h4 {
 			margin-bottom: .5em;
-			a {
-				color: $color__green;
-
-				&:hover {
-					color: $color__base;
-				}
-			}
+			color: $color__green;
 		}
 
 		.prop-feats {
 			@include font-size(.75);
+		}
+
+		a {
+			color: $color__base;
+
+			h4 {
+				color: $color__green;
+			}
+			&:hover h4 {
+				color: $color__base;
+			}
 		}
 	}
 }
