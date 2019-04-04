@@ -23,19 +23,13 @@ echo '<div class="inner-wrap">';
 	echo '<header class="page-header">';
 		echo '<div class="title-wrap">';
 		echo '<h1 class="page-title">' . esc_html__( 'Page not found.', 'clct' ) . '</h1>';
+		echo '<p>' . esc_html__( 'Please use the menu in the header or try a search.', 'clct' ) . '</p>';
+		get_search_form();
 		echo '</div>';
 	echo '</header>';
 
 echo '</div>';
 echo '</div>';
-
-	echo '<div class="page-content">';
-	echo '<div class="inner-wrap">';
-		echo '<div class="error-message">' . esc_html__( 'ERROR - ERROR - ERROR', 'clct' ) . '</div>';
-		echo '<p>' . esc_html__( 'Please use the menu in the header or try a search.', 'clct' ) . '</p>';
-		get_search_form();
-		echo '</div>';
-		echo '</div>';
 
 echo '</div>';
 echo '</div>';

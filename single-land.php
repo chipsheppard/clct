@@ -62,7 +62,7 @@ function clct_land() {
 		<div class="cf"></div>
 
 	</div>
-</div><!-- /top-block -->
+</div>
 
 
 <div class="land-content">
@@ -81,7 +81,7 @@ function clct_land() {
 		</div>
 
 	</div>
-</div><!-- /land-content -->
+</div>
 
 
 <div class="properties-map">
@@ -100,9 +100,9 @@ function clct_land() {
 				<?php endif; ?>
 				<a href="<?php echo esc_url( $file_url ); ?>" title="<?php echo esc_attr( $file_title ); ?>" target="_blank"><?php echo esc_html( $file_title ); ?></a>
 			<?php endif; ?>
-		</div><!-- /map-link -->
+		</div>
 	</div>
-</div><!-- /properties-map -->
+</div>
 
 
 <div class="properties">
@@ -141,8 +141,8 @@ function clct_land() {
 			endif;
 			?>
 		</div>
-	</div><!-- /inner-wrap -->
-</div><!-- /properties -->
+	</div>
+</div>
 
 
 <div class="land-list-wrap">
@@ -186,7 +186,7 @@ function clct_land() {
 			}
 			?>
 			<div class="cf"></div>
-		</div><!-- /land-list -->
+		</div>
 
 		<div class="view-more-wrap">
 			<div class="view-more">
@@ -233,13 +233,12 @@ function clct_land() {
 			}
 			?>
 			<div class="cf"></div>
-		</div><!-- /land-list extended -->
+		</div>
 
-	</div><!-- /inner-wrap -->
-</div><!-- /land-list-wrap -->
+	</div>
+</div>
 
 
-<!-- ACF OPTIONS - land-regulations -->
 <div class="land-regulations">
 	<div class="inner-wrap">
 

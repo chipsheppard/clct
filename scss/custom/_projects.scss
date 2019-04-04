@@ -12,7 +12,7 @@
 			border-bottom: 1px solid #ffffff;
 			color: #ffffff;
 			font-family: $font__sans;
-			font-weight: $font__weight-bold;
+			font-weight: $font__weight-semibold;
 
 			&:hover {
 				opacity: .75;
@@ -101,7 +101,7 @@
 
 	.view-text {
 		font-family: $font__sans;
-		font-weight: $font__weight-bold;
+		font-weight: $font__weight-semibold;
 		margin-top: .75em;
 		@include font-size(.875);
 	}

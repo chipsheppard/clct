@@ -44,10 +44,6 @@ function clct_project() {
 		<div class="inner-wrap">
 
 			<div class="view-all">
-				<!--a href="<?php echo esc_url( home_url( '/projects-events' ) ); ?>" class="vm">
-				<div class="cssicon-arrow-r"></div>
-				<div class="view-text">View more</div>
-			</a-->
 				<span class="cssicon-plusminus plus"></span>
 				<div class="view-text">View <span class="m">all</span><span class="l">less</span></div>
 			</div>
@@ -85,7 +81,7 @@ function clct_project() {
 				}
 				?>
 				<div class="cf"></div>
-			</div><!-- /projects-list -->
+			</div>
 
 			<div class="project-list extended">
 				<?php
@@ -122,14 +118,13 @@ function clct_project() {
 				}
 				?>
 				<div class="cf"></div>
-			</div><!-- /projects extended -->
+			</div>
 
-		</div><!-- /inner-wrap -->
-	</div><!-- /project-list-wrap -->
+		</div>
+	</div>
 
 
 
-	<!-- ACF OPTIONS - project footer -->
 	<div class="projects-footer">
 		<div class="inner-wrap">
 			<?php

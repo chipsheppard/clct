@@ -68,9 +68,9 @@
 	.elink:not(.btn) {
 		border-bottom: 1px solid $color__green;
 		color: $color__green;
-		font-weight: $font__weight-bold;
 		display: inline-block;
 		font-family: $font__sans;
+		font-weight: $font__weight-semibold;
 		@include font-size(.875);
 
 		&:hover {

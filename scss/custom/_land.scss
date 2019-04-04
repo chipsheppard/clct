@@ -28,7 +28,7 @@
 			color: #ffffff;
 			display: inline-block;
 			font-family: $font__sans;
-			font-weight: $font__weight-bold;
+			font-weight: $font__weight-semibold;
 			@include font-size(.875);
 
 			span {
@@ -74,7 +74,7 @@
 				border-bottom: 1px solid currentColor;
 				color: #ffffff;
 				font-family: $font__sans;
-				font-weight: $font__weight-bold;
+				font-weight: $font__weight-semibold;
 				padding-bottom: .25em;
 
 				&:hover {
@@ -93,7 +93,7 @@
 			border-bottom: 1px solid #c8f1eb;
 			color: #c8f1eb;
 			font-family: $font__sans;
-			font-weight: $font__weight-bold;
+			font-weight: $font__weight-semibold;
 			padding-bottom: .25em;
 			@include font-size(.875);
 
@@ -146,7 +146,7 @@
 			border-bottom: 1px solid #ffffff;
 			color: #ffffff;
 			font-family: $font__sans;
-			font-weight: $font__weight-bold;
+			font-weight: $font__weight-semibold;
 
 			&:hover {
 				opacity: .75;
@@ -234,7 +234,7 @@
 			color: $color__blue;
 			display: inline-block;
 			font-family: $font__sans;
-			font-weight: $font__weight-bold;
+			font-weight: $font__weight-semibold;
 			margin: 0 1em 0 0;
 			@include font-size(.875);
 
@@ -429,7 +429,7 @@
 		.view-text {
 			color: $color__green;
 			font-family: $font__sans;
-			font-weight: $font__weight-bold;
+			font-weight: $font__weight-semibold;
 			margin-top: .75em;
 			@include font-size(.875);
 		}
