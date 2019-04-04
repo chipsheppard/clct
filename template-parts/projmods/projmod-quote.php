@@ -16,6 +16,9 @@
 	<div class="col-1-2">
 		<blockquote>
 			<?php the_sub_field( 'quote' ); ?>
+			<?php if ( get_sub_field( 'quote_citation' ) ) : ?>
+			<cite><?php the_sub_field( 'quote_citation' ); ?></cite>
+			<?php endif; ?>
 		</blockquote>
 	</div>
 	<div class="col-1-4 desktop-only">&nbsp;</div>

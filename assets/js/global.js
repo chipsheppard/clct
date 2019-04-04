@@ -181,7 +181,6 @@ jQuery(function( $ ){
  * Sticky On-Page Menu
  *
  * @link https://codepen.io/jovanivezic/pen/ZQNdag
- */
 (function( $ ) {
 	if ($('.opm').length ) {
 
@@ -205,6 +204,7 @@ jQuery(function( $ ){
 		return;
 	}
 } )( jQuery );
+ */
 
 /**
  * Smooth Scroll for OnPage Menus
@@ -269,7 +269,7 @@ jQuery(function( $ ){
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 800, function(){
+	}, 500, function(){
 
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;

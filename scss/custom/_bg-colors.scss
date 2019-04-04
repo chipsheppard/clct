@@ -48,9 +48,6 @@
 body {
 	@include bg-dust3();
 }
-body.single-land {
-	@include bg-topography();
-}
 
 .homepage {
 	@include bg-dust2();
@@ -63,38 +60,44 @@ body.single-land {
 	}
 }
 
-.land,
-.single-land {
+body.land {
+	@include bg-topography2();
 	.top-block,
 	.land-regulations,
 	.site-footer {
-		@include bg-topography3();
-	}
-}
-.single-land {
-	.properties-map,
-	.properties {
 		@include bg-topography2();
 	}
 }
+body.single-land {
+	@include bg-topography2();
+	.properties {
+		@include bg-topography3();
+	}
+}
 
-
-.trust {
+body.trust {
+	@include bg-stucco();
 	.top-block,
+	.message,
 	.site-footer {
 		@include bg-stucco();
 	}
 }
+
 body.projects,
-.event-row,
 body.single-project {
 	@include bg-feathers();
 	.top-block,
-	.projects-footer,
 	.site-footer {
 		@include bg-feathers();
 	}
 }
+.event-row,
+.projects-footer,
+.project-list-wrap {
+	@include bg-feathers();
+}
+
 body.give {
 	@include bg-crossword();
 	.top-block,
