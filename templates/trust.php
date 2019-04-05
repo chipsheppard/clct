@@ -223,7 +223,7 @@ function clct_trust() {
 	<div class="message">
 		<div class="inner-wrap">
 			<div class="col-1-2 first">
-				&nbsp;
+				<div class="desktop-only">&nbsp;</div>
 				<div class="message-image">
 					<?php
 					$m_image = get_field( 'message_image' );

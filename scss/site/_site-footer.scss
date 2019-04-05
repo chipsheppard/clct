@@ -10,6 +10,10 @@
 	position: relative;
 	@include font-size(.875);
 
+	@include breakpoint(phone-h) {
+		@include font-size(.75);
+	}
+
 	a {
 		color: #756c5c;
 
@@ -28,6 +32,10 @@
 		font-weight: $font__weight-normal;
 		letter-spacing: 1px;
 		margin-bottom: 1.5em;
+
+		@include breakpoint(tablet-v) {
+			margin-bottom: .5em;
+		}
 	}
 
 	ul {
@@ -73,8 +81,18 @@
 		}
 	}
 
-	&.address h6 {
-		margin-bottom: .25em;
+	&.address {
+		h6 {
+			margin-bottom: .25em;
+		}
+		.column {
+			float: left;
+			width: 49%;
+
+			&:nth-of-type(2) {
+				margin-left: 2%;
+			}
+		}
 	}
 
 	&.copyright {
@@ -82,8 +100,9 @@
 		font-family: $font__sans;
 		@include font-size(.688);
 
-		@include breakpoint(tablet-h) {
-			text-align: center;
+		@include breakpoint(tablet-v) {
+			padding-top: 1em;
+			margin-bottom: 1em;
 		}
 	}
 
@@ -101,8 +120,15 @@
 			}
 		}
 
-		@include breakpoint(tablet-h) {
-			text-align: center;
+		@include breakpoint(tablet-v) {
+			clear:none;
+			float: left;
+			width: 50%;
+			text-align: left;
+
+			.textwidget {
+				display: inline-block;
+			}
 		}
 	}
 
@@ -114,11 +140,14 @@
 		}
 
 		@include breakpoint(tablet-v) {
-			text-align: center;
+			clear: none;
+			float: right;
+			display: inline-block;
 			padding: 0 2em;
+			width: 50%;
 
 			img {
-				width: auto;
+				width: 130px;
 			}
 		}
 	}

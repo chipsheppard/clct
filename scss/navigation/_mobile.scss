@@ -63,10 +63,12 @@
 		li {
 			width: auto;
 			padding: 1em;
+			margin-bottom:.5em;
 			text-shadow: none;
 
 			&:last-of-type {
 				width: auto;
+				margin-bottom: 0;
 			}
 
 			li  {

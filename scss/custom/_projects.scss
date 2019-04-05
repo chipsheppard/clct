@@ -71,7 +71,6 @@
 	}
 
 	.proj-block {
-
 		h4 a {
 			color: $color__yellow;
 		}
@@ -90,13 +89,13 @@
 		float: right;
 		line-height: 1;
 		text-align: center;
-		width:16%;
+		width: 85px;
 
-		@include breakpoint(tablet-v) {
-			position: absolute;
-			bottom: 10%;
-			right: 8px;
-		}
+		//@include breakpoint(tablet-v) {
+		//	display: block;
+		//	float: none;
+		//	margin-bottom: 2em;
+		//}
 	}
 
 	.view-text {
@@ -113,7 +112,11 @@
 
 .project-list {
 	display: inline-block;
-	width: 80%;
+	width: calc(100% - 85px);
+
+	//@include breakpoint(tablet-v) {
+	//	width: 100%;
+	//}
 
 	&.extended {
 		display: none;
@@ -239,7 +242,7 @@
 
 		@include breakpoint(tablet-v) {
 			float: none;
-			display: block;
+			display: inline-block;
 			padding-top: 0;
 			margin-bottom: 2em;
 		}

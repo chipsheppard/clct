@@ -42,10 +42,6 @@ textarea {
 	font-weight: $font__weight-normal;
 	line-height: $font__line-height-body;
 	@include font-size(1);
-
-	@include breakpoint(tablet-v) {
-		@include font-size(.875);
-	}
 }
 
 /* Copy */

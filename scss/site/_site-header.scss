@@ -23,11 +23,8 @@
 
 	@include breakpoint(tablet-v) {
 		display:block;
+		padding: 1em 0 .75em;
 		width: 160px;
-	}
-
-	@include breakpoint(phone-h) {
-		padding: .75em 0;
 	}
 
 	a {

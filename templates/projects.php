@@ -54,10 +54,6 @@ function clct_projects() {
 
 
 	<div class="project-list-wrap">
-		<div class="view-all">
-			<span class="cssicon-plusminus plus"></span>
-			<div class="view-text">View <span class="m">all</span><span class="l">less</span></div>
-		</div>
 		<div class="project-list">
 			<?php
 			$query = new WP_Query( array(
@@ -94,6 +90,10 @@ function clct_projects() {
 			<div class="cf"></div>
 		</div><!-- /projects-list -->
 
+		<div class="view-all">
+			<span class="cssicon-plusminus plus"></span>
+			<div class="view-text">View <span class="m">all</span><span class="l">less</span></div>
+		</div>
 
 		<div class="project-list extended">
 			<?php

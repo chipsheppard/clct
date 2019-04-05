@@ -123,11 +123,11 @@
 			margin-top: 0em;
 			margin-bottom: 64em;
 		}
-		@include breakpoint(phone-v) {
-			margin-bottom: 34em;
+		@include breakpoint(phone-h) {
+			margin-bottom: 40em;
 		}
 		@include breakpoint(phone-v) {
-			margin-bottom: 34em;
+			margin-bottom: 30em;
 		}
 
 		.text {
@@ -144,12 +144,15 @@
 			left: 0;
 
 			@include breakpoint(tablet-v) {
-				top: 98%;
-				left: 5%;
+				position: relative;
 
 				img {
 					max-width: none;
-					width: 95%;
+					width: 100%;
+				}
+
+				.image-caption a {
+					color: #ffffff;
 				}
 			}
 		}

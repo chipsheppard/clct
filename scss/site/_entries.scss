@@ -9,11 +9,6 @@
 	letter-spacing: 1px;
 	word-break: break-word;
 
-	// keep defasult for Projects&Events
-	//@include breakpoint(phone-h) {
-	//	@include font-size(1.875);
-	//}
-
 	div {
 		@include font-size(1);
 		text-transform: uppercase;
@@ -64,7 +59,7 @@
 
 .single {
 	.entry-title {
-		line-height: 1.2;
+		line-height: 1.4;
 		margin: 0;
 		@include font-size(3.875);
 

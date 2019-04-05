@@ -9,6 +9,7 @@
 
 	@include breakpoint(tablet-v) {
 		line-height: 1.2em;
+		margin-top: -60px;
 		padding: .75em;
 		width: 94%;
 		@include font-size(1.5);
