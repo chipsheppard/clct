@@ -65,7 +65,24 @@
 }
 
 .homepage, .trust, .give {
+
 	.top-block {
+
+		.inner-wrap {
+			padding-right: 0;
+			padding-bottom: 4em;
+
+			@include breakpoint(tablet-v) {
+				padding: 0;
+			}
+		}
+
+		.top-video {
+			display: block;
+		}
+		.top-image {
+			display: none;
+		}
 
 		@include breakpoint(tablet-v) {
 			padding-bottom: 0;
@@ -77,16 +94,17 @@
 			}
 		}
 
-		.inner-wrap {
-			padding-right: 0;
-			padding-bottom: 4em;
-
-			@include breakpoint(tablet-v) {
-				padding: 0;
+		@include breakpoint(phone-h) {
+			.top-video {
+				display: none;
+			}
+			.top-image {
+				display: block;
 			}
 		}
 	}
 }
+
 .homepage .top-block .intro {
 	.intro-text {
 		@include font-size(3.875);

@@ -9,6 +9,13 @@
  * @license  GPL-2.0+
  */
 
+$videoimage = get_field( 'video_image' );
+if ( ! empty( $videoimage ) ) :
+	$viurl = $videoimage['url'];
+	$vialt = $videoimage['alt'];
+	$viwidth = $videoimage['width'];
+	$viheight = $videoimage['height'];
+endif;
 ?>
 
 <div class="top-block">
@@ -24,10 +31,13 @@
 	</div>
 
 	<div class="col-4-7 vid">
-		<video id="homepage-video" playsinline autoplay loop muted poster="<?php the_field( 'poster_image' ); ?>" width="666" height="1000">
+		<video class="top-video" playsinline autoplay loop muted poster="<?php the_field( 'poster_image' ); ?>" width="<?php echo esc_attr( $viwidth ); ?>" height="<?php echo esc_attr( $viheight ); ?>">
 			<source type="video/mp4" src="<?php the_field( 'mp4_video' ); ?>">
 			<source type="video/webm" src="<?php the_field( 'webm_video' ); ?>">
 		</video>
+		<?php if ( ! empty( $videoimage ) ) : ?>
+		<img class="top-image" src="<?php echo esc_url( $viurl ); ?>" alt="<?php echo esc_attr( $vialt ); ?>" width="<?php echo esc_attr( $viwidth ); ?>" height="<?php echo esc_attr( $viheight ); ?>" />
+		<?php endif; ?>
 	</div>
 
 </div>
