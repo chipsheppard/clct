@@ -42,8 +42,39 @@
 		}
 	}
 
+	.properties-map {
+		p {
+			margin: 0;
+		}
+
+		iframe,
+		img {
+			display: block;
+		    object-fit: cover;
+			width: 100%;
+			height: 470px;
+			@include breakpoint(tablet-h) {
+				height: 320px;
+			}
+			@include breakpoint(tablet-m) {
+				height: 270px;
+			}
+			@include breakpoint(tablet-v) {
+				height: auto
+			}
+		}
+	}
+
 	.land-block {
 		margin-bottom: 4em;
+
+		.land-thumb {
+			img {
+				display: block;
+			    object-fit: cover;
+			    height: 135px;
+			}
+		}
 
 		.land-stat {
 			margin: 1em 0 1.5em;

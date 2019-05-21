@@ -70,7 +70,8 @@ body.land {
 }
 body.single-land {
 	@include bg-topography2();
-	.properties {
+	.properties,
+	.properties-map {
 		@include bg-topography3();
 	}
 }

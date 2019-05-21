@@ -11,6 +11,27 @@
 		}
 	}
 
+	.top-left {
+		.top-left-img {
+			max-width: 580px;
+
+			@include breakpoint(tablet-v) {
+				max-width: none;
+			}
+
+			img {
+				display: block;
+			    object-fit: cover;
+				width: 100%;
+				height: 390px;
+
+				@include breakpoint(tablet-v) {
+					height: auto;
+				}
+			}
+		}
+	}
+
 	.top-right {
 		padding: 1em 0 10em 6em;
 
@@ -43,6 +64,17 @@
 	.mid-left {
 		margin-top: -8em;
 		padding-left: 6em;
+
+		.mid-left-img {
+			max-width: 180px;
+		}
+
+		img {
+			display: block;
+		    object-fit: cover;
+			width: 100%;
+			height: 240px;
+		}
 
 		@include breakpoint(tablet-v) {
 			padding-left: 0;

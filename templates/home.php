@@ -57,7 +57,9 @@ function clct_home() {
 				$t1_width = $t1_image['sizes'][ $t1_size . '-width' ];
 				$t1_height = $t1_image['sizes'][ $t1_size . '-height' ];
 				?>
-				<img src="<?php echo esc_url( $t1_url ); ?>" alt="<?php echo esc_attr( $t1_alt ); ?>" width="<?php echo esc_attr( $t1_width ); ?>" height="<?php echo esc_attr( $t1_height ); ?>" />
+				<div class="top-left-img">
+					<img src="<?php echo esc_url( $t1_url ); ?>" alt="<?php echo esc_attr( $t1_alt ); ?>" width="<?php echo esc_attr( $t1_width ); ?>" height="<?php echo esc_attr( $t1_height ); ?>" />
+				</div>
 				<?php
 				if ( $t1_link ) :
 					$t1_link_url = $t1_link['url'];
@@ -102,7 +104,9 @@ function clct_home() {
 				$t2_width = $t2_image['sizes'][ $t2_size . '-width' ];
 				$t2_height = $t2_image['sizes'][ $t2_size . '-height' ];
 				?>
-				 <img src="<?php echo esc_url( $t2_url ); ?>" alt="<?php echo esc_attr( $t2_alt ); ?>" width="<?php echo esc_attr( $t2_width ); ?>" height="<?php echo esc_attr( $t2_height ); ?>" />
+				<div class="mid-left-img">
+					 <img src="<?php echo esc_url( $t2_url ); ?>" alt="<?php echo esc_attr( $t2_alt ); ?>" width="<?php echo esc_attr( $t2_width ); ?>" height="<?php echo esc_attr( $t2_height ); ?>" />
+				 </div>
 				<?php
 			endif;
 			?>
