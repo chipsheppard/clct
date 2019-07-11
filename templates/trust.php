@@ -279,9 +279,9 @@ function clct_trust() {
 						$t_thumb = $t_image['sizes'][ $t_size ];
 						$t_width = $t_image['sizes'][ $t_size . '-width' ];
 						$t_height = $t_image['sizes'][ $t_size . '-height' ];
-					endif;
-					?>
-					<img src="<?php echo esc_url( $t_url ); ?>" alt="<?php echo esc_attr( $t_alt ); ?>" width="<?php echo esc_attr( $t_width ); ?>" height="<?php echo esc_attr( $t_height ); ?>" />
+						?>
+						<img src="<?php echo esc_url( $t_url ); ?>" alt="<?php echo esc_attr( $t_alt ); ?>" width="<?php echo esc_attr( $t_width ); ?>" height="<?php echo esc_attr( $t_height ); ?>" />
+					<?php endif; ?>
 					<div class="title"><?php the_sub_field( 'trustee_title' ); ?></div>
 					<h3><?php the_sub_field( 'trustee_name' ); ?></h3>
 					<?php the_sub_field( 'trustee_text' ); ?>
@@ -314,9 +314,9 @@ function clct_trust() {
 						$d_thumb = $d_image['sizes'][ $d_size ];
 						$d_width = $d_image['sizes'][ $d_size . '-width' ];
 						$d_height = $d_image['sizes'][ $d_size . '-height' ];
-					endif;
-					?>
-					<img src="<?php echo esc_url( $d_url ); ?>" alt="<?php echo esc_attr( $d_alt ); ?>" width="<?php echo esc_attr( $d_width ); ?>" height="<?php echo esc_attr( $d_height ); ?>" />
+						?>
+						<img src="<?php echo esc_url( $d_url ); ?>" alt="<?php echo esc_attr( $d_alt ); ?>" width="<?php echo esc_attr( $d_width ); ?>" height="<?php echo esc_attr( $d_height ); ?>" />
+					<?php endif; ?>
 					<div class="title"><?php the_sub_field( 'director_title' ); ?></div>
 					<h3><?php the_sub_field( 'director_name' ); ?></h3>
 					<?php the_sub_field( 'director_text' ); ?>
@@ -329,7 +329,42 @@ function clct_trust() {
 		?>
 	</div>
 
+
+	<?php if ( have_rows( 'team_members' ) ) : ?>
+	<div class="team inner-wrap">
+		<div class="section-title"><?php the_field( 'team_section_header' ); ?></div>
+		<h2><?php the_field( 'team_section_title' ); ?></h2>
+		<?php
+		echo '<div class="team-list">';
+		while ( have_rows( 'team_members' ) ) :
+			the_row();
+			?>
+			<div class="portrait">
+				<?php
+				$tm_image = get_sub_field( 'team_image' );
+				if ( ! empty( $tm_image ) ) :
+					$tm_url = $tm_image['url'];
+					$tm_alt = $tm_image['alt'];
+					$tm_size = 'medium';
+					$tm_thumb = $tm_image['sizes'][ $tm_size ];
+					$tm_width = $tm_image['sizes'][ $tm_size . '-width' ];
+					$tm_height = $tm_image['sizes'][ $tm_size . '-height' ];
+					?>
+					<img src="<?php echo esc_url( $tm_url ); ?>" alt="<?php echo esc_attr( $tm_alt ); ?>" width="<?php echo esc_attr( $tm_width ); ?>" height="<?php echo esc_attr( $tm_height ); ?>" />
+				<?php endif; ?>
+				<div class="title"><?php the_sub_field( 'team_title' ); ?></div>
+				<h3><?php the_sub_field( 'team_name' ); ?></h3>
+				<?php the_sub_field( 'team_text' ); ?>
+			</div>
+			<?php
+		endwhile;
+		echo '<div class="cf"></div>';
+		echo '</div>';
+		?>
+	</div>
 	<?php
+	endif;
+
 }
 add_action( 'tha_entry_content_before', 'clct_trust' );
 
